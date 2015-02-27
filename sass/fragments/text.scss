@@ -1,0 +1,97 @@
+@import "../config/default";
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $headline-font;
+}
+
+h1 {
+	font-size: $extra-big-font-size;
+	line-height: $extra-big-line-height;
+	margin-bottom: $double-margin;
+}
+
+h2 {
+	font-size: $big-font-size;
+	line-height: $big-line-height;
+	margin-bottom: $single-margin;
+}
+
+h3 {
+	font-size: $semibig-font-size;
+	line-height: $semibig-line-height;
+	margin-bottom: $single-margin;
+}
+
+h4 {
+	font-size: $medium-font-size;
+	line-height: $medium-line-height;
+	margin-bottom: $single-margin;
+}
+
+h5 {
+	font-size: $standard-font-size;
+	line-height: $standard-line-height;
+	margin-bottom: $single-margin;
+}
+
+h6 {
+	font-size: $small-font-size;
+	line-height: $small-line-height;
+	margin-bottom: $single-margin;
+}
+
+
+strong {
+	font-style: bold;
+	font-family: $bold-font;
+}
+
+cite,
+em {
+	font-style:italic;
+	font-family: $italic-font;
+}
+
+small {
+	font-size: $very-small-font-size;
+}
+
+mark{
+	background-color: $mark-color;
+	color: $invert-font-color;
+}
+
+s{
+	text-decoration: line-through;
+}
+
+abbr{
+	font-variant: none;
+	border-bottom: 1px dotted $standard-font-color;
+}
+
+q, blockquote{
+	font-family: $italic-font;
+
+}
+
+
+q:before, blockquote:before{
+	content: "»";
+}
+
+q:after, blockquote:after{
+	content: "«";
+}
+
+kbd{
+	font-family: $keyboard-command;
+	background-color: $standard-font-color;
+	color: $invert-font-color;
+	letter-spacing: 2px;
+}
+
+
+p{
+	margin-bottom: $single-margin;
+}

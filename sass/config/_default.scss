@@ -1,0 +1,51 @@
+//Fonts
+$standard-font : "open_sansregular";
+$bold-font : $standard-font;
+$italic-font : $standard-font;
+$headline-font : $standard-font;
+$keyboard-command : $standard-font;
+
+//Sizes
+$standard-font-size: 14px;
+
+$extra-big-font-size: 50px;
+$big-font-size: 35px;
+$semibig-font-size: 25px;
+$medium-font-size: 18px;
+$small-font-size: 12px;
+$very-small-font-size : 8px;
+
+//Lineheight
+$standard-line-height: 120%;
+$extra-big-line-height: 120%;
+$big-line-height: 120%;
+$semibig-line-height: 120%;
+$medium-line-height: 120%;
+$small-line-height: 120%;
+$very-small-line-height: 120%;
+
+//margins
+$single-margin: 15px;
+$double-margin: 30px;
+$triple-margin: 45px;
+
+//gridspacing
+$grind-default-spacing: evently; //possible values are evently and between
+$grid-space-between: 20px;
+$grid-space-evently: 5px;
+
+//Colors
+$standard-font-color: #222222;
+$invert-font-color: #ffffff;
+
+
+$primary-color : "";
+$secondary-color : "";
+
+$mark-color : #ff0000;
+
+$link-color : #000000;
+$link-color-hover : #666666;
+$link-color-visited : #666666;
+
+

@@ -1,0 +1,6 @@
+@import "config/default";
+@import "config/custom";
+
+@function pxToRem($px, $standard: $standard-font-size) {
+    @return ($px / $standard) * 1rem;
+}

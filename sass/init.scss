@@ -1,0 +1,12 @@
+@import "config/default";
+@import "config/custom";
+//reset margin and paddings and set default fonts;
+html * {
+	margin: 0;
+	padding: 0;
+	font-family: $standard-font;
+	font-size: $standard-font-size;
+	color: $standard-font-color;
+	border: none;
+	background: none;
+}

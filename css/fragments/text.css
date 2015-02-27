@@ -1,0 +1,76 @@
+@charset "UTF-8";
+h1, h2, h3, h4, h5, h6 {
+  font-family: "open_sansregular"; }
+
+h1 {
+  font-size: 50px;
+  line-height: 120%;
+  margin-bottom: 30px; }
+
+h2 {
+  font-size: 35px;
+  line-height: 120%;
+  margin-bottom: 15px; }
+
+h3 {
+  font-size: 25px;
+  line-height: 120%;
+  margin-bottom: 15px; }
+
+h4 {
+  font-size: 18px;
+  line-height: 120%;
+  margin-bottom: 15px; }
+
+h5 {
+  font-size: 14px;
+  line-height: 120%;
+  margin-bottom: 15px; }
+
+h6 {
+  font-size: 12px;
+  line-height: 120%;
+  margin-bottom: 15px; }
+
+strong {
+  font-style: bold;
+  font-family: "open_sansregular"; }
+
+cite,
+em {
+  font-style: italic;
+  font-family: "open_sansregular"; }
+
+small {
+  font-size: 8px; }
+
+mark {
+  background-color: #ff0000;
+  color: #ffffff; }
+
+s {
+  text-decoration: line-through; }
+
+abbr {
+  font-variant: none;
+  border-bottom: 1px dotted #222222; }
+
+q, blockquote {
+  font-family: "open_sansregular"; }
+
+q:before, blockquote:before {
+  content: "»"; }
+
+q:after, blockquote:after {
+  content: "«"; }
+
+kbd {
+  font-family: "open_sansregular";
+  background-color: #222222;
+  color: #ffffff;
+  letter-spacing: 2px; }
+
+p {
+  margin-bottom: 15px; }
+
+/*# sourceMappingURL=text.css.map */

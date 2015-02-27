@@ -1,0 +1,117 @@
+@import "../config/default";
+@import "../functions";
+
+[is="row"] {
+	display: flex;
+	font-size: 0;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+[is="column"] {
+	font-size: $standard-font-size;
+	display: inline-flex;
+	box-sizing: border-box;
+	border: 1px #000 solid;
+	background: #efefef;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	overflow: hidden;
+	-webkit-flex-grow: 1;
+	flex-grow: 1;
+	@if $grind-default-spacing == between {
+		padding-right: pxToRem($grid-space-between / 3);
+		padding-left: pxToRem($grid-space-between / 3);
+	}
+}
+
+[is="row"][has="no-grow"] [is="column"]{
+	flex-grow: 0;
+}
+
+@if $grind-default-spacing == between {
+	[is="column"]:first-child{
+		padding-left: 0;
+		padding-right: pxToRem($grid-space-between / 2);
+	}
+
+	[is="column"]:last-child{
+		padding-right: 0;
+		padding-left: pxToRem($grid-space-between / 2);
+	}
+	//remove spaces in last row
+	[is="row"][has~="2-columns"] > [is="column"]:nth-child(2n),
+	[is="row"][has~="3-columns"] > [is="column"]:nth-child(3n),
+	[is="row"][has~="4-columns"] > [is="column"]:nth-child(4n),
+	[is="row"][has~="5-columns"] > [is="column"]:nth-child(5n),
+	[is="row"][has~="6-columns"] > [is="column"]:nth-child(6n),
+	[is="row"][has~="7-columns"] > [is="column"]:nth-child(7n),
+	[is="row"][has~="8-columns"] > [is="column"]:nth-child(8n),
+	[is="row"][has~="9-columns"] > [is="column"]:nth-child(9n),
+	[is="row"][has~="10-columns"] > [is="column"]:nth-child(10n),
+	[is="row"][has~="11-columns"] > [is="column"]:nth-child(11n),
+	[is="row"][has~="12-columns"] > [is="column"]:nth-child(12n){
+		padding-left: pxToRem($grid-space-between / 2);
+		padding-right:0;
+	}
+}
+
+@if $grind-default-spacing == evently {
+	[is="row"] > [is="column"]:first-child,
+	[is="row"] > [is="column"]:last-child,
+	[is="row"] > [is="column"] {
+		padding: $grid-space-evently;
+	}
+
+}
+
+[is="item"] {
+	font-size: $standard-font-size;
+	display: inline-block;
+
+}
+
+
+
+
+//generate column width
+@for $i from 1 through 12 {
+	[is="row"][has~="#{$i}-columns"] > [is="column"] { 
+		flex-basis: 100% / $i;
+	}
+
+	@for $y from 1 through $i { 
+		[is="row"][has~="#{$i}-columns"] > [is="column"][has~="#{$y}-columns-width"] { 
+			flex-basis: (100% / $i) * $y;
+		}
+		[is="row"][has~="#{$i}-columns"] > [is="column"][has~="#{$y}-columns-margin"] { 
+			margin-left: (100% / $i) * $y;
+		}
+	 }
+}
+
+
+[is="row"][has~="evently-spacing"] > [is="column"]:first-child,
+[is="row"][has~="evently-spacing"] > [is="column"]:last-child,
+[is="row"][has~="evently-spacing"] > [is="column"] {
+	padding: $grid-space-evently;
+}
+
+[is="row"][has~="between-spacing"] > [is="column"] {
+	padding-left: pxToRem($grid-space-between / 3);
+	padding-right: pxToRem($grid-space-between / 3);
+}
+
+[is="row"][has~="between-spacing"] > [is="column"]:first-child{
+	padding-left: 0;
+	padding-right: pxToRem($grid-space-between / 2);
+}
+
+[is="row"][has~="between-spacing"] > [is="column"]:last-child{
+	padding-right: 0;
+	padding-left: pxToRem($grid-space-between / 2);
+}
+
