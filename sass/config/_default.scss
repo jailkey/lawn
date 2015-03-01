@@ -5,7 +5,7 @@ $italic-font : $standard-font;
 $headline-font : $standard-font;
 $keyboard-command : $standard-font;
 
-//Sizes
+//Fontsizes
 $standard-font-size: 14px;
 
 $extra-big-font-size: 50px;
@@ -34,16 +34,42 @@ $grind-default-spacing: evently; //possible values are evently and between
 $grid-space-between: 20px;
 $grid-space-evently: 5px;
 
+//buttonspacing
+$small-button-padding-top-bottom: 10px;
+$small-button-padding-left-right: 20px;
+
+$standard-button-padding-top-bottom: 15px;
+$standard-button-padding-left-right: 25px;
+
 //Colors
 $standard-font-color: #222222;
 $invert-font-color: #ffffff;
+
+$primary-color: #0093c3;
+$primary-color-lighter: #00bfff;
+$primary-color-medium-dark: #007aa3;
+$primary-color-dark: #006282;
+
+$warn-color: #c36e00;
+$error-color: #c30000;
+$success-color: #20c300;
+
+
+$standard-button-font-color: #ffffff;
+
+$standard-button-color: $primary-color;
+$standard-button-color-hover: $primary-color-medium-dark;
+$standard-button-color-active: $primary-color-lighter;
+
+$success-button-color: #20c300;
+$error-button-color: #c30000;
+
 
 
 $primary-color : "";
 $secondary-color : "";
 
 $mark-color : #ff0000;
-
 $link-color : #000000;
 $link-color-hover : #666666;
 $link-color-visited : #666666;

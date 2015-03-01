@@ -1,5 +1,60 @@
+@import "../config/default";
+@import "../config/custom";
+@import "../mixins";
+
 [is="button"]{
+	background-color: $standard-button-color;
+	padding: $standard-button-padding-top-bottom $standard-button-padding-left-right;
+	color: $standard-button-font-color;
+	font-size: $medium-font-size;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+	position: relative;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	overflow: hidden;
+	display: inline-block;
+	z-index:1;
+	@include user-select(none);
+	-mold-ripple : button;
+}
+
+[is="button"]:focus,
+[is="button"]:hover {
+	background-color: $standard-button-color-hover;
+}
+
+[is="button"]:active{
 	
 }
 
+
+[is="button"][has="big-size"]{
+
+}
+
+[is="button"][has="small-size"]{
+	
+}
+
+[is="button"][has="very-small-size"]{
+	
+}
+
+.ripple-helper{
+	background:  $standard-button-color-active;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	top: 0;
+	left: 0;
+	transform: scale3d(1, 1, 1);
+	position: absolute;
+	opacity : 0;
+	z-index: -1;
+}
+
+
+	
 
