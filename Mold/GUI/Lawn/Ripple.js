@@ -33,18 +33,27 @@ Seed({
 
 			element.append(helper);
 
-			helper.animate({
-				"transform" : "scale3d(5, 5, 5)",
-				"opacity" : "1"
-			}, 0.2, "ease-in").then(function(){
-				helper.animate({
-					"transform" : "scale3d(20, 20, 20)",
-					"opacity" : "0"
-				}, 1, "ease-out").then(function(){
-					helper.remove();
-					_animation = false;
-				});
+			helper.animate([
+				{
+					step : '10%',
+					style : {
+						"transform" : "scale3d(5, 5, 5)",
+						"opacity" : "1"
+					},
+				},
+				{
+					step : '100%',
+					style : { 
+						"transform" : "scale3d(30, 30, 30)",
+						"opacity" : "0"
+					}
+				}
+			], '0.5s', "ease-out")
+			.then(function(){
+				console.log("ready")
+				helper.remove();	
 			});
+			
 			
 		});
 
