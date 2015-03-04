@@ -18,44 +18,78 @@ Seed({
 		]
 	},
 	function(node, element, collection){
-		var _animation = false;
-		
-		element.on("mouseup", function(e){
+		var helper = false,
+			growToStart = "scale3d(0.8, 0.8, 0.8)",
+			growToEnd = "scale3d(20, 20, 20)",
+			growTime = "0.9",
+			opacity = "0.9",
+			shrinkTime = "0.3";
 
-			var helper = new Element("span");
+		element.on("mousedown", function(e){
+
+			if(helper){
+				helper.remove();
+			}
+
+			helper = new Element("span");
 			
-			helper.addClass("ripple-helper");
+			var properties = element.getAttribute("has");
 			
-			helper.css({
-				left : (e.pageX - element.position().left - 10) ,
-				top : (e.pageY - element.position().top - 10) 
-			})
+			if(
+				element.getAttribute("state") !== "loading"
+				&& element.getAttribute("disabled") == null
+			){
+				
+				helper.css({
+					left : (e.pageX - element.position().left - 10) ,
+					top : (e.pageY - element.position().top - 10) 
+				})
 
-			element.append(helper);
-
-			helper.animate([
-				{
-					step : '10%',
-					style : {
-						"transform" : "scale3d(5, 5, 5)",
-						"opacity" : "1"
-					},
-				},
-				{
-					step : '100%',
-					style : { 
-						"transform" : "scale3d(30, 30, 30)",
-						"opacity" : "0"
+				if(properties){
+					properties = properties.split(" ");
+					
+					if(Mold.contains(properties, "round-shapes")){
+						
+						growToEnd = "scale3d(3, 3, 3)";
+						growTime = "0.3";
+						opacity = "0.7";
+					
+						helper.css({
+							left :  element.sizes().width / 2 - 10,
+							top :  element.sizes().height / 2 - 10 
+						})
 					}
 				}
-			], '0.5s', "ease-out")
-			.then(function(){
-				console.log("ready")
-				helper.remove();	
-			});
-			
+				
+				helper.addClass("ripple-helper");
+
+				element.append(helper);
+
+				helper.animate({
+					"transform" : growToEnd,
+					"opacity" : opacity
+				}, growTime, "ease-out");
+
+			}
 			
 		});
+	
+		element.on("mouseup", function(e){
+
+			if(helper){
+				console.log("mouseup")
+				helper.animate({
+					"transform" : growToStart,
+					"opacity" : "0"
+				}, shrinkTime, "ease-in").then(function(){
+					
+					helper.remove();
+					helper = false;
+				});
+			}
+
+		});
+	
 
 	}
 )

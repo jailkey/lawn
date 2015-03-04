@@ -1,6 +1,50 @@
+@import "functions.scss";
+
 @mixin user-select($value){
 	-webkit-user-select: $value;
     -moz-user-select: $value;
     -ms-user-select: $value;
     user-select: $value;
- }
+}
+
+
+@mixin animation($value){
+	-webkit-animation: $value;
+	animation: $value;
+}
+
+@mixin keyframes($name){
+	@keyframes #{$name} {
+		@content;
+	}
+
+	@-webkit-keyframes #{$name}{
+		@content;
+	}
+}
+
+@mixin button-selector($selctors...){
+	$all: ();
+	@for $i from 1 through length($selectors) {
+		 $all : append($all, '[is="button"]' + nth($selectors, $i), comma);
+		 $all : append($all, '[role="button"]' + nth($selectors, $i), comma);
+		 $all : append($all, '[role="button"]' + nth($selectors, $i), comma);
+	}
+	#{join($all)} {
+		@content
+
+	}
+}
+
+
+//from: https://css-tricks.com/snippets/sass/material-shadows-mixin/
+@mixin depth($depth) {
+  @if $depth < 1 {
+    box-shadow: none;
+  } @else if $depth > 5 {
+    @warn "Invalid $depth `#{$depth}` for mixin `card`.";
+  } @else {
+    box-shadow: bottom-shadow($depth), top-shadow($depth);  
+  }
+}
+

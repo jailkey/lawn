@@ -2,44 +2,107 @@
 @import "../config/custom";
 @import "../mixins";
 
+button,
+[role=button],
 [is="button"]{
 	background-color: $standard-button-color;
 	padding: $standard-button-padding-top-bottom $standard-button-padding-left-right;
 	color: $standard-button-font-color;
-	font-size: $medium-font-size;
+	font-size: $standard-font-size;
 	cursor: pointer;
-	transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out,  transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 	position: relative;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	overflow: hidden;
 	display: inline-block;
 	z-index:1;
+	transform: scale3d(1, 1, 1);
+	@if $button-shadows == on {
+		@include depth(1);
+	}
 	@include user-select(none);
 	-mold-ripple : button;
 }
 
+button:focus,
+button:hover,
+[role="butto"]:focus,
+[role="button"]:hover,
 [is="button"]:focus,
 [is="button"]:hover {
 	background-color: $standard-button-color-hover;
+	@if $button-shadows == on {
+		@include depth(2);
+	}
 }
 
-[is="button"]:active{
+button:disabled,
+button[disabled],
+button[state="loading"],
+[role="button"]:disabled,
+[role="button"][disabled],
+[role="button"][state="loading"],
+[is="button"]:disabled,
+[is="button"][disabled],
+[is="button"][state="loading"]{
+	color: rgba($standard-button-font-color, 0.3);
+	background-color:  rgba($standard-button-color, 0.7);
+}
+
+[role="button"]:disabled:hover,
+[role="button"][disabled]:hover,
+[role="button"][state="loading"]:hover,
+[is="button"]:disabled:hover,
+[is="button"][disabled]:hover,
+[is="button"][state="loading"]:hover{
+	background-color: rgba($standard-button-color, 0.7);
+	cursor: default;
+	@if $button-shadows == on {
+		@include depth(1);
+	}
+}
+
+button[has*="big-size"],
+[role="button"][has*="big-size"],
+[is="button"][has*="big-size"]{
+
+}
+
+button[has*="small-size"],
+[role="button"][has*="small-size"],
+[is="button"][has*="small-size"]{
 	
 }
 
-
-[is="button"][has="big-size"]{
-
-}
-
-[is="button"][has="small-size"]{
+button[has*="very-small-size"],
+[role="button"][has*="very-small-size"],
+[is="button"][has*="very-small-size"]{
 	
 }
 
-[is="button"][has="very-small-size"]{
-	
+button[has*="round-shapes"],
+[role="button"][has*="round-shapes"],
+[is="button"][has*="round-shapes"]{
+	border-radius:100%;
+	height: 20px;
+	width: 20px;
+	padding: 10px;
+	overflow: visible;
+
 }
+
+button:before,
+[role="button"]:before,
+[is="button"]:before{
+	font-size:$standard-icon-size;
+	height: $standard-icon-size - 3px;
+	margin-top: -3px;
+	margin-left: -1px;
+	float:left;
+	padding-right: 10px;
+}
+
 
 .ripple-helper{
 	background:  $standard-button-color-active;

@@ -2,7 +2,9 @@ Seed({
 		name : "Mold.GUI.Lawn.Main",
 		dna : "action",
 		include : [
-			".Ripple"
+			".Ripple",
+			".Loading",
+			".Components.Loader"
 		]
 	},
 	function(){

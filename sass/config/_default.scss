@@ -1,3 +1,18 @@
+//Standard Colors
+$standard-font-color: #222222;
+$invert-font-color: #ffffff;
+
+$primary-color: #0093c3;
+$primary-color-lighter: #00bfff;
+$primary-color-medium-dark: #007aa3;
+$primary-color-dark: #006282;
+
+$warn-color: #c36e00;
+$error-color: #c30000;
+$success-color: #20c300;
+
+
+
 //Fonts
 $standard-font : "open_sansregular";
 $bold-font : $standard-font;
@@ -15,6 +30,17 @@ $medium-font-size: 18px;
 $small-font-size: 12px;
 $very-small-font-size : 8px;
 
+//Iconssize
+$standard-icon-size: 26px;
+$standard-icon-line-height: 20px;
+
+$extra-big-icon-size: 70px;
+$big-icon-size: 45px;
+$semibig-icon-size: 35px;
+$medium-icon-size: 30px;
+$small-icon-size: 22px;
+$very-small-icon-size : 18px;
+
 //Lineheight
 $standard-line-height: 120%;
 $extra-big-line-height: 120%;
@@ -29,42 +55,33 @@ $single-margin: 15px;
 $double-margin: 30px;
 $triple-margin: 45px;
 
-//gridspacing
+//grid
 $grind-default-spacing: evently; //possible values are evently and between
 $grid-space-between: 20px;
 $grid-space-evently: 5px;
 
-//buttonspacing
+//buttons
+$button-shadows : on;
+
 $small-button-padding-top-bottom: 10px;
 $small-button-padding-left-right: 20px;
 
-$standard-button-padding-top-bottom: 15px;
-$standard-button-padding-left-right: 25px;
-
-//Colors
-$standard-font-color: #222222;
-$invert-font-color: #ffffff;
-
-$primary-color: #0093c3;
-$primary-color-lighter: #00bfff;
-$primary-color-medium-dark: #007aa3;
-$primary-color-dark: #006282;
-
-$warn-color: #c36e00;
-$error-color: #c30000;
-$success-color: #20c300;
+$standard-button-padding-top-bottom: 10px;
+$standard-button-padding-left-right: 20px;
 
 
 $standard-button-font-color: #ffffff;
-
 $standard-button-color: $primary-color;
 $standard-button-color-hover: $primary-color-medium-dark;
 $standard-button-color-active: $primary-color-lighter;
-
 $success-button-color: #20c300;
 $error-button-color: #c30000;
 
 
+
+
+
+$loading-animation-color : #ffffff;
 
 $primary-color : "";
 $secondary-color : "";

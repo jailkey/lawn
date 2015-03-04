@@ -1,4 +1,15 @@
 @font-face {
+	font-family: 'ionicons';
+	src:url("../fonts/ionicons-2.0.1/ionicons.eot");
+	src:url("../fonts/ionicons-2.0.1/ionicons.eot#iefix") format("embedded-opentype"),
+		url("../fonts/ionicons-2.0.1/ionicons.ttf?") format("truetype"),
+		url("../fonts/ionicons-2.0.1/ionicons.woff") format("woff"),
+		url("../fonts/ionicons-2.0.1/ionicons.svg#Ionicons") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
     font-family: 'open_sansregular';
     src: url('../fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot');
     src: url('../fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
