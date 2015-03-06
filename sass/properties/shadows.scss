@@ -2,74 +2,74 @@
 @import "../config/custom";
 @import "../mixins";
 
-[has*="no-shadow"]:hover,
-[has*="no-shadow"]{
+[has~="no-shadow"]:hover,
+[has~="no-shadow"]{
 	box-shadow: none;
 }
 
-[has*="shadow-depth-1"]{
+[has~="shadow-depth-1"]{
 	@include depth(1);
 }
 
-button[has*="shadow-depth-1"]:focus,
-button[has*="shadow-depth-1"]:hover,
-[role="button"][has*="shadow-depth-1"]:focus,
-[role="button"][has*="shadow-depth-1"]:hover,
-[is="button"][has*="shadow-depth-1"]:focus,
-[is="button"][has*="shadow-depth-1"]:hover{
+button[has~="shadow-depth-1"]:focus,
+button[has~="shadow-depth-1"]:hover,
+[role="button"][has~="shadow-depth-1"]:focus,
+[role="button"][has~="shadow-depth-1"]:hover,
+[is="button"][has~="shadow-depth-1"]:focus,
+[is="button"][has~="shadow-depth-1"]:hover{
 	@include depth(1);
 }
 
-[has*="shadow-depth-2"]{
+[has~="shadow-depth-2"]{
 	@include depth(2);
 }
 
-button[has*="shadow-depth-2"]:focus,
-button[has*="shadow-depth-2"]:hover,
-[role="button"][has*="shadow-depth-2"]:focus,
-[role="button"][has*="shadow-depth-2"]:hover,
-[is="button"][has*="shadow-depth-2"]:focus,
-[is="button"][has*="shadow-depth-2"]:hover{
+button[has~="shadow-depth-2"]:focus,
+button[has~="shadow-depth-2"]:hover,
+[role="button"][has~="shadow-depth-2"]:focus,
+[role="button"][has~="shadow-depth-2"]:hover,
+[is="button"][has~="shadow-depth-2"]:focus,
+[is="button"][has~="shadow-depth-2"]:hover{
 	@include depth(3);
 }
 
-[has*="shadow-depth-3"]{
+[has~="shadow-depth-3"]{
 	@include depth(3);
 }
 
-button[has*="shadow-depth-3"]:focus,
-button[has*="shadow-depth-3"]:hover,
-[role="button"][has*="shadow-depth-3"]:focus,
-[role="button"][has*="shadow-depth-3"]:hover,
-[is="button"][has*="shadow-depth-3"]:focus,
-[is="button"][has*="shadow-depth-3"]:hover{
+button[has~="shadow-depth-3"]:focus,
+button[has~="shadow-depth-3"]:hover,
+[role="button"][has~="shadow-depth-3"]:focus,
+[role="button"][has~="shadow-depth-3"]:hover,
+[is="button"][has~="shadow-depth-3"]:focus,
+[is="button"][has~="shadow-depth-3"]:hover{
 	@include depth(4);
 }
 
 
-[has*="shadow-depth-4"]{
+[has~="shadow-depth-4"]{
 	@include depth(4);
 }
 
-button[has*="shadow-depth-4"]:focus,
-button[has*="shadow-depth-4"]:hover,
-[role="button"][has*="shadow-depth-4"]:focus,
-[role="button"][has*="shadow-depth-4"]:hover,
-[is="button"][has*="shadow-depth-4"]:focus,
-[is="button"][has*="shadow-depth-4"]:hover{
+button[has~="shadow-depth-4"]:focus,
+button[has~="shadow-depth-4"]:hover,
+[role="button"][has~="shadow-depth-4"]:focus,
+[role="button"][has~="shadow-depth-4"]:hover,
+[is="button"][has~="shadow-depth-4"]:focus,
+[is="button"][has~="shadow-depth-4"]:hover{
 	@include depth(5);
 }
 
-[has*="shadow-depth-5"]{
+[has~="shadow-depth-5"]{
 	@include depth(5);
 }
 
-button[has*="shadow-depth-5"]:focus,
-button[has*="shadow-depth-5"]:hover,
-[role="button"][has*="shadow-depth-5"]:focus,
-[role="button"][has*="shadow-depth-5"]:hover,
-[is="button"][has*="shadow-depth-5"]:focus,
-[is="button"][has*="shadow-depth-5"]:hover{
+button[has~="shadow-depth-5"]:focus,
+button[has~="shadow-depth-5"]:hover,
+[role="button"][has~="shadow-depth-5"]:focus,
+[role="button"][has~="shadow-depth-5"]:hover,
+[is="button"][has~="shadow-depth-5"]:focus,
+[is="button"][has~="shadow-depth-5"]:hover{
 	@include depth(5);
 }
 
