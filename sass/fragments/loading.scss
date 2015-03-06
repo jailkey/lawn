@@ -2,39 +2,97 @@
 @import "../config/custom";
 @import "../mixins";
 
-x-loader,
-[is="loader"]{
+
+
+//default spinner
+
+x-loader[state="default"],
+[is="loader"][state="default"]{
+	font-size: 10px;
+	position: relative;
+	text-indent: -9999em;
+	border-top: 1.1em solid rgba($spinner-color, 0.2);
+	border-right: 1.1em solid rgba($spinner-color, 0.2);
+	border-bottom: 1.1em solid rgba($spinner-color, 0.2);
+	border-left: 1.1em solid $spinner-color;
+	position: absolute;
+	z-index: 999;
+	left: 50%;
+	top: 50%;
+	transform: rotate(1deg);
+	@include animation(spinner 1s linear 0.1s infinite);
+}
+
+x-loader[state="default"],
+[is="loader"][state="default"],
+x-loader[state="default"]:after,
+[is="loader"][state="default"]:after {
+	border-radius: 50%;
+	@include spinner-size($standard-spinner-size);
+}
+
+[has~="small-size"] > x-loader[state="default"],
+x-loader[state="default"][has="small-size"]{
+	@include spinner-size($small-spinner-size);
+}
+
+[has~="medium-size"] > x-loader[state="default"],
+x-loader[state="default"][has="medium-size"]{
+	@include spinner-size($medium-spinner-size);
+}
+
+[has~="big-size"] > x-loader[state="default"],
+x-loader[state="default"][has="big-size"]{
+	@include spinner-size($big-spinner-size);
+}
+
+
+@include keyframes(spinner){
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+
+//bounce loader
+x-loader[state="bounce"],
+[is="loader"][state="bounce"]{
 	position: absolute;
 	z-index: 999;
 	opacity: 0.9;
 	display: block;
-	height: 20px;
-	width: 90px;
+	line-height: 50%;
+	width: 50%;
 	left: 50%;
 	top: 50%;
-	margin-left: -45px;
-	margin-top: -10px;
+	margin-left: -25%;
+	margin-top: -25%;
 	text-align: center;
 }
 
-x-loader [is="bounce-animation"],
-[is="loader"] [is="bounce-animation"]{
-	height: 10px;
-	width: 10px;
+x-loader[state="bounce"] [is="bounce-animation"],
+[is="loader"][state="bounce"] [is="bounce-animation"]{
+	height: 0.6em;
+	width: 0.6em;
 	display: inline-block;
-	margin-left: 10px;
+	margin-left: 1em;
 	//border-radius: 10px;
 	opacity: 0;
 	background-color: $loading-animation-color;
 	@include animation(bouncing 2s ease-in-out 0s infinite);
 }
 
-x-loader [is="bounce-animation"]:nth-child(2n),
+x-loader[state="bounce"] [is="bounce-animation"]:nth-child(2n),
 [is="loader"][is="bounce-animation"]:nth-child(2n){
 	@include animation(bouncing 2s ease-in-out 0.3s infinite);
 }
 
-x-loader [is="bounce-animation"]:nth-child(3n),
+x-loader[state="bounce"] [is="bounce-animation"]:nth-child(3n),
 [is="loader"][is="bounce-animation"]:nth-child(3n){
 	@include animation(bouncing 2s ease-in-out 0.6s infinite);
 }
@@ -53,3 +111,6 @@ x-loader [is="bounce-animation"]:nth-child(3n),
 		transform: scale3d(0.1, 0.1, 1);
 	}
 }
+
+
+
