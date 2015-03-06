@@ -18,28 +18,20 @@ Seed({
 		]
 	},
 	function(node, element, collection){
-		var helper = false,
-			growToStart = "scale3d(0.8, 0.8, 0.8)",
-			growToEnd = "scale3d(20, 20, 20)",
-			growTime = "0.9",
-			opacity = "0.9",
-			shrinkTime = "0.3";
-
+		var _animation = false;
+		
 		element.on("mousedown", function(e){
-
-			if(helper){
-				helper.remove();
-			}
-
-			helper = new Element("span");
-			
-			var properties = element.getAttribute("has");
 			
 			if(
 				element.getAttribute("state") !== "loading"
 				&& element.getAttribute("disabled") == null
 			){
-				
+				var helper = new Element("span"),
+					properties = element.getAttribute("has"),
+					growToStart = "scale3d(5, 5, 5)",
+					growToEnd = "scale3d(20, 20, 20)",
+					growTime = "0.9s";
+
 				helper.css({
 					left : (e.pageX - element.position().left - 10) ,
 					top : (e.pageY - element.position().top - 10) 
@@ -50,9 +42,9 @@ Seed({
 					
 					if(Mold.contains(properties, "round-shapes")){
 						
-						growToEnd = "scale3d(3, 3, 3)";
-						growTime = "0.3";
-						opacity = "0.7";
+						growToStart = "scale3d(0.8, 0.8, 0.8)";
+						growToEnd = "scale3d(5, 5, 5)";
+						growTime = "0.6s";
 					
 						helper.css({
 							left :  element.sizes().width / 2 - 10,
@@ -62,34 +54,36 @@ Seed({
 				}
 				
 				helper.addClass("ripple-helper");
+				
+				
 
 				element.append(helper);
+				console.log("growTime", growTime);
 
-				helper.animate({
-					"transform" : growToEnd,
-					"opacity" : opacity
-				}, growTime, "ease-out");
+		
 
+				helper.animate([
+					{
+						step : '10%',
+						style : {
+							"transform" : growToStart,
+							"opacity" : "0.9"
+						},
+					},
+					{
+						step : '100%',
+						style : { 
+							"transform" : growToEnd,
+							"opacity" : "0"
+						}
+					}
+				], growTime , "ease-out")
+				.then(function(){
+					helper.remove();	
+				});
 			}
 			
 		});
-	
-		element.on("mouseup", function(e){
-
-			if(helper){
-				console.log("mouseup")
-				helper.animate({
-					"transform" : growToStart,
-					"opacity" : "0"
-				}, shrinkTime, "ease-in").then(function(){
-					
-					helper.remove();
-					helper = false;
-				});
-			}
-
-		});
-	
 
 	}
 )
