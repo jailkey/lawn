@@ -8,7 +8,7 @@ lawn wurde konzipiert um eleganten, sprechenden Quelltext zu schreiben. CSS-Klas
 lawn arbeitet im Gegensatz zu herkömmlichen Frameworks nicht mit Klassen sondern mit speziellen Attributen. Dass sorgt dafür das sich der Quelltext (fast) wie Aufsatz ließt. Klassen werden erst vom Nutzer vergeben um benutzerdefiniert Modifikationen vorzunehmen, so zu sagen als "custom-layer".
 
 ###Wie funktioniert lawn genau?
-Alle elemente in lawn werden über die attribute "is", "has", "state", "behavior" konfiguriert, dass heißt es werden bestimmte Styles gestetzt und Verhalten hinzugefügt. Jedes der Attribute hat eine bestimmte Funktion:
+Alle Elemente in lawn werden über die attribute "is", "has", "state", "behavior" konfiguriert, dass heißt es werden bestimmte Styles gestetzt und Verhalten hinzugefügt. Jedes der Attribute hat eine bestimmte Funktion:
 * Das Attribute "is" beschreibt den Typ eines Elements, falls es kein entsprechendes Element gibt, oder ein anders element das Verhalten annehemen soll. Das "is" Attribute darf nur einen Wert enthalten.
 * Das "has" Attribute bestimmt (abweichende) Eigenschaften eines Elements z.B. has="secondary-color". Dieses Attribute kann mehrere mit Leerzeichen getrennte Werte enthalten.
 * Das "state" Attribute bestimmt den status eines Elements, je nach status kann sich die Darstellung und das Verhalten ändern. Ein Button mit dem status="loading" lässt sich z.B. nicht mehr klicken und zeigt einen Spinner an. Das Attribute darf nur einen Wert enthalten.
@@ -32,4 +32,4 @@ Dazu ein kleines Beispiel:
 Lawn basiert auf SASS und MoldJS der Aufbau der Dateien gestalltet sich wie folgt:
 ```
 
-```
+``
