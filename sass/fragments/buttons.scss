@@ -1,14 +1,16 @@
 @import "../config/default";
 @import "../config/custom";
 @import "../mixins";
+@import "../functions";
 
 button,
 [role=button],
 [is="button"]{
 	background-color: $standard-button-color;
-	padding: $standard-button-padding-top-bottom $standard-button-padding-left-right;
+	padding: pxToRem($standard-button-padding-top-bottom) pxToRem($standard-button-padding-left-right);
 	color: $standard-button-font-color;
-	font-size: $standard-font-size;
+	font-size: pxToRem($standard-font-size);
+	line-height: pxToRem($standard-line-height);
 	cursor: pointer;
 	transition: background-color 0.3s ease-in-out,  transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 	position: relative;
@@ -17,6 +19,11 @@ button,
 	overflow: hidden;
 	display: inline-block;
 	z-index:1;
+	vertical-align: text-bottom;
+	box-sizing: content-box;
+	max-height: pxToRem($standard-line-height);
+
+
 	transform: scale3d(1, 1, 1);
 	@if $button-shadows == on {
 		@include depth(1);
@@ -63,53 +70,80 @@ button[state="loading"],
 	}
 }
 
-button[has*="big-size"],
-[role="button"][has*="big-size"],
-[is="button"][has*="big-size"]{
 
+button[has~="big-size"], 
+[role="button"][has~="big-size"], 
+[is="button"][has~="big-size"]{
+	line-height: pxToRem($big-line-height);
+	max-height: pxToRem($big-line-height);
+	padding: pxToRem($big-button-padding-top-bottom) pxToRem($big-button-padding-left-right);
 }
 
-button[has*="small-size"],
-[role="button"][has*="small-size"],
-[is="button"][has*="small-size"]{
-	
+button[has~="medium-size"], 
+[role="button"][has~="medium-size"], 
+[is="button"][has~="medium-size"]{
+	line-height: pxToRem($medium-line-height);
+	max-height: pxToRem($medium-line-height);
+	padding: pxToRem($medium-button-padding-top-bottom) pxToRem($medium-button-padding-left-right);
 }
 
-button[has*="very-small-size"],
-[role="button"][has*="very-small-size"],
-[is="button"][has*="very-small-size"]{
-	
+button[has~="small-size"], 
+[role="button"][has~="small-size"], 
+[is="button"][has~="small-size"]{
+	line-height: pxToRem($small-line-height);
+	max-height: pxToRem($small-line-height);
+	padding: pxToRem($small-button-padding-top-bottom) pxToRem($small-button-padding-left-right);
 }
 
-button[has*="round-shapes"],
-[role="button"][has*="round-shapes"],
-[is="button"][has*="round-shapes"]{
+
+button[has~="round-shapes"],
+[role="button"][has~="round-shapes"],
+[is="button"][has~="round-shapes"]{
 	border-radius:100%;
-	height: 20px;
-	width: 20px;
-	padding: 10px;
-	overflow: visible;
-
+	height: pxToRem($standard-icon-size);
+	width: pxToRem($standard-icon-size);
+	padding: pxToRem($standard-button-padding-top-bottom);
 }
+
+button[has~="round-shapes"][has~="big-size"], 
+[role="button"][has~="round-shapes"][has~="big-size"], 
+[is="button"][has~="round-shapes"][has~="big-size"]{
+	height: pxToRem($big-icon-size);
+	width: pxToRem($big-icon-size);
+	padding: pxToRem($big-button-padding-top-bottom);
+}
+
+button[has~="round-shapes"][has~="medium-size"], 
+[role="button"][has~="round-shapes"][has~="medium-size"], 
+[is="button"][has~="round-shapes"][has~="medium-size"]{
+	height: pxToRem($medium-icon-size);
+	width: pxToRem($medium-icon-size);
+	padding: pxToRem($medium-button-padding-top-bottom);
+}
+
+
+button[has~="round-shapes"][has~="small-size"], 
+[role="button"][has~="round-shapes"][has~="small-size"], 
+[is="button"][has~="round-shapes"][has~="small-size"]{
+	height: pxToRem($small-icon-size);
+	width: pxToRem($small-icon-size);
+	padding: pxToRem($small-button-padding-top-bottom);
+}
+
 
 button:before,
-[role="button"]:before,
+[role=button]:before,
 [is="button"]:before{
-	font-size:$standard-icon-size;
-	height: $standard-icon-size - 3px;
-	margin-top: -3px;
-	margin-left: -1px;
-	float:left;
-	padding-right: 10px;
+	margin-right: 0.5em;
 }
 
 
 .ripple-helper{
 	background:  $standard-button-color-active;
 	display: block;
-	width: 20px;
-	height: 20px;
-	border-radius: 20px;
+	width: pxToRem(20px);
+	height: pxToRem(20px);
+	border-radius: pxToRem(20px);
 	top: 0;
 	left: 0;
 	transform: scale3d(1, 1, 1);
@@ -119,5 +153,67 @@ button:before,
 }
 
 
+//button bars
+//
+[is="button-bar"]{
+	text-align: right;
+	font-size: 0;
+}
+
+[is="button-bar"][has~="full-width-buttons"]{
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+}
+
+[is="button-bar"][has~="full-width-buttons"] [is="button"]{
+	display: inline-flex;
+	-webkit-flex-grow: 1;
+	flex-grow: 1;
+}
+
+[is="button-bar"] > [is="button-bar"]{
+	display: inline-block;
+}
+
+[is="button-bar"][has~="left-align"]{
+	text-align: left;
+}
+
+[is="button-bar"] > [is="button-bar"][has~="left-align"]{
+	float: left;
+}
+
+
+[is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(2),
+[is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(2) ~ [is="button-bar"] {
+	width: 50%;
+}
+
+[is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(2),
+[is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(2) ~ [is="button-bar"] > [is="button-bar"]{
+	text-align:left;
+}
+
+[is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(3),
+[is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(3) ~ [is="button-bar"] {
+	width: 33.33%;
+}
+
+
+[is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(3) ~ [is="button-bar"]{
+	text-align:center;
+}
+
+[is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(3) ~ [is="button-bar"]:last-child{
+	text-align:right;
+}
+
+[is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(3){
+	text-align:left;
+}
+
+
+	
 	
 
