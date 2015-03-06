@@ -1,0 +1,33 @@
+@import "../config/default";
+@import "../config/custom";
+@import "../functions";
+
+
+[has~="big-size"]{
+	font-size: pxToRem($big-font-size);
+
+}
+
+[has~="big-size"][has*="icon-"]:before{
+	font-size: pxToRem($big-icon-size);
+}
+
+[has~="medium-size"]{
+	font-size: pxToRem($medium-font-size);
+
+}
+
+[has~="medium-size"][has*="icon-"]:before{
+	font-size: pxToRem($medium-icon-size);
+}
+
+[has~="small-size"]{
+	font-size: pxToRem($small-font-size);
+
+}
+
+[has~="small-size"][has*="icon-"]:before{
+	font-size: pxToRem($small-icon-size);
+}
+
+
