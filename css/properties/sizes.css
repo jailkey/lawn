@@ -1,3 +1,19 @@
+[has~="big-size"] {
+  font-size: 2.5rem; }
 
+[has~="big-size"][has*="icon-"]:before {
+  font-size: 3.21429rem; }
+
+[has~="medium-size"] {
+  font-size: 1.28571rem; }
+
+[has~="medium-size"][has*="icon-"]:before {
+  font-size: 2.14286rem; }
+
+[has~="small-size"] {
+  font-size: 0.85714rem; }
+
+[has~="small-size"][has*="icon-"]:before {
+  font-size: 1rem; }
 
 /*# sourceMappingURL=sizes.css.map */
