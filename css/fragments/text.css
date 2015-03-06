@@ -3,34 +3,34 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "open_sansregular"; }
 
 h1 {
-  font-size: 50px;
-  line-height: 120%;
-  margin-bottom: 30px; }
+  font-size: 3.57143rem;
+  line-height: 4.28571rem;
+  margin-bottom: 2.14286rem; }
 
 h2 {
-  font-size: 35px;
-  line-height: 120%;
-  margin-bottom: 15px; }
+  font-size: 2.5rem;
+  line-height: 3.21429rem;
+  margin-bottom: 1.07143rem; }
 
 h3 {
-  font-size: 25px;
-  line-height: 120%;
-  margin-bottom: 15px; }
+  font-size: 1.78571rem;
+  line-height: 2.28571rem;
+  margin-bottom: 1.07143rem; }
 
 h4 {
-  font-size: 18px;
-  line-height: 120%;
-  margin-bottom: 15px; }
+  font-size: 1.28571rem;
+  line-height: 2.14286rem;
+  margin-bottom: 1.07143rem; }
 
 h5 {
-  font-size: 14px;
-  line-height: 120%;
-  margin-bottom: 15px; }
+  font-size: 1rem;
+  line-height: 1.42857rem;
+  margin-bottom: 1.07143rem; }
 
 h6 {
-  font-size: 12px;
-  line-height: 120%;
-  margin-bottom: 15px; }
+  font-size: 0.85714rem;
+  line-height: 1rem;
+  margin-bottom: 1.07143rem; }
 
 strong {
   font-style: bold;
@@ -42,7 +42,7 @@ em {
   font-family: "open_sansregular"; }
 
 small {
-  font-size: 8px; }
+  font-size: 0.57143rem; }
 
 mark {
   background-color: #ff0000;
@@ -71,6 +71,6 @@ kbd {
   letter-spacing: 2px; }
 
 p {
-  margin-bottom: 15px; }
+  margin-bottom: 1.07143rem; }
 
 /*# sourceMappingURL=text.css.map */
