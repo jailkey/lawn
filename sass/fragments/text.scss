@@ -1,43 +1,45 @@
 @import "../config/default";
+@import "../config/custom";
+@import "../functions";
 
 h1, h2, h3, h4, h5, h6{
 	font-family: $headline-font;
 }
 
 h1 {
-	font-size: $extra-big-font-size;
-	line-height: $extra-big-line-height;
-	margin-bottom: $double-margin;
+	font-size: pxToRem($extra-big-font-size);
+	line-height: pxToRem($extra-big-line-height);
+	margin-bottom: pxToRem($double-margin);
 }
 
 h2 {
-	font-size: $big-font-size;
-	line-height: $big-line-height;
-	margin-bottom: $single-margin;
+	font-size: pxToRem($big-font-size);
+	line-height: pxToRem($big-line-height);
+	margin-bottom: pxToRem($single-margin);
 }
 
 h3 {
-	font-size: $semibig-font-size;
-	line-height: $semibig-line-height;
-	margin-bottom: $single-margin;
+	font-size: pxToRem($semibig-font-size);
+	line-height: pxToRem($semibig-line-height);
+	margin-bottom: pxToRem($single-margin);
 }
 
 h4 {
-	font-size: $medium-font-size;
-	line-height: $medium-line-height;
-	margin-bottom: $single-margin;
+	font-size: pxToRem($medium-font-size);
+	line-height: pxToRem($medium-line-height);
+	margin-bottom: pxToRem($single-margin);
 }
 
 h5 {
-	font-size: $standard-font-size;
-	line-height: $standard-line-height;
-	margin-bottom: $single-margin;
+	font-size: pxToRem($standard-font-size);
+	line-height: pxToRem($standard-line-height);
+	margin-bottom: pxToRem($single-margin);
 }
 
 h6 {
-	font-size: $small-font-size;
-	line-height: $small-line-height;
-	margin-bottom: $single-margin;
+	font-size: pxToRem($small-font-size);
+	line-height: pxToRem($small-line-height);
+	margin-bottom: pxToRem($single-margin);
 }
 
 
@@ -53,7 +55,7 @@ em {
 }
 
 small {
-	font-size: $very-small-font-size;
+	font-size: pxToRem($very-small-font-size);
 }
 
 mark{
@@ -93,5 +95,5 @@ kbd{
 
 
 p{
-	margin-bottom: $single-margin;
+	margin-bottom: pxToRem($single-margin);
 }
