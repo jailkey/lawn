@@ -31,23 +31,24 @@ $small-font-size: 12px;
 $very-small-font-size : 8px;
 
 //Iconssize
-$standard-icon-size: 26px;
-$standard-icon-line-height: 20px;
+$standard-icon-size: 20px;
 
 $extra-big-icon-size: 70px;
+
 $big-icon-size: 45px;
+
 $semibig-icon-size: 35px;
 $medium-icon-size: 30px;
-$small-icon-size: 22px;
-$very-small-icon-size : 18px;
+$small-icon-size: 14px;
+$very-small-icon-size : 10px;
 
 //Lineheight
-$standard-line-height: 120%;
-$extra-big-line-height: 120%;
-$big-line-height: 120%;
-$semibig-line-height: 120%;
-$medium-line-height: 120%;
-$small-line-height: 120%;
+$standard-line-height: 20px;
+$extra-big-line-height: 60px;
+$big-line-height: 45px;
+$semibig-line-height: 32px;
+$medium-line-height: 30px;
+$small-line-height: 14px;
 $very-small-line-height: 120%;
 
 //margins
@@ -61,13 +62,20 @@ $grid-space-between: 20px;
 $grid-space-evently: 5px;
 
 //buttons
-$button-shadows : on;
-
-$small-button-padding-top-bottom: 10px;
-$small-button-padding-left-right: 20px;
+$button-shadows : off;
 
 $standard-button-padding-top-bottom: 10px;
 $standard-button-padding-left-right: 20px;
+
+$big-button-padding-top-bottom: 20px;
+$big-button-padding-left-right: 40px;
+
+$medium-button-padding-top-bottom: 15px;
+$medium-button-padding-left-right: 30px;
+
+$small-button-padding-top-bottom: 5px;
+$small-button-padding-left-right: 10px;
+
 
 
 $standard-button-font-color: #ffffff;
@@ -81,8 +89,6 @@ $error-button-color: #c30000;
 
 
 
-$loading-animation-color : #ffffff;
-
 $primary-color : "";
 $secondary-color : "";
 
@@ -92,3 +98,11 @@ $link-color-hover : #666666;
 $link-color-visited : #666666;
 
 
+//animations
+$loading-animation-color : #ffffff;
+
+$spinner-color : #ffffff;
+$small-spinner-size : 9px;
+$standard-spinner-size : 20px;
+$medium-spinner-size : 30px;
+$big-spinner-size : 40px;
