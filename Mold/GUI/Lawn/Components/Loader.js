@@ -3,7 +3,8 @@ Seed({
 		dna : "component",
 		include : [
 			"->Mold.DNA.Component",
-			{ Element : "Mold.Lib.Element" }
+			{ Element : "->Mold.Lib.Element" },
+			{ Elements : "->Mold.Lib.Elements" }
 		],
 		directives : [
 			{
@@ -13,7 +14,8 @@ Seed({
 				collect : {
 					attribute : [
 						 "is",
-						 "has"
+						 "has",
+						 "state"
 					]
 				}
 			},
@@ -24,28 +26,51 @@ Seed({
 				collect : {
 					attribute : [
 						 "is",
-						 "has"
+						 "has",
+						 "state"
 					]
 				}
 			}
 		]
 	},
 	function(node, element, collection){
+
 		if(collection.is === "loader" || element.tagName.toLowerCase() === "x-loader"){
-			var bounceOne = new Element("span");
-			bounceOne.setAttribute("is", "bounce-animation");
+			if(!element.getAttribute("state")){
+				element.setAttribute("state", "default");
+				console.log("set state", element.getAttribute("state"))
+			}
 
-			element.append(bounceOne);
 
-			var bounceTwo = new Element("span");
-			bounceTwo.setAttribute("is", "bounce-animation");
+			var setLoader = function(){
+				
+				var state = element.getAttribute("state");
+				console.log("state", state);
+				//reset
+				new Elements('.bounce-animation').remove();
 
-			element.append(bounceTwo);
+				switch(state){
+					case "default":
+						break;
+					case "bounce":
+						var bounceOne = new Element("span");
+						bounceOne.setAttribute("is", "bounce-animation");
+						element.append(bounceOne);
+						var bounceTwo = new Element("span");
+						bounceTwo.setAttribute("is", "bounce-animation");
+						element.append(bounceTwo);
+						var bounceThree = new Element("span");
+						bounceThree.setAttribute("is", "bounce-animation");
+						element.append(bounceThree);
+						break;
+				}
 
-			var bounceThree = new Element("span");
-			bounceThree.setAttribute("is", "bounce-animation");
 
-			element.append(bounceThree);
+			}
+
+			setLoader();
+
+			Mold.watch(element, "state", setLoader);
 		}
 	}
 );
