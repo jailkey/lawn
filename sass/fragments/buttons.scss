@@ -154,61 +154,73 @@ button:before,
 
 
 //button bars
-//
+[is="option-bar"],
 [is="button-bar"]{
 	text-align: right;
 	font-size: 0;
 }
 
+[is="option-bar"][has~="full-width-buttons"],
 [is="button-bar"][has~="full-width-buttons"]{
 	display: flex;
 	flex-direction: row;
 	-webkit-flex-direction: row;
 }
 
+[is="option-bar"][has~="full-width-buttons"] [is="button"],
 [is="button-bar"][has~="full-width-buttons"] [is="button"]{
 	display: inline-flex;
 	-webkit-flex-grow: 1;
 	flex-grow: 1;
 }
 
+[is="button-bar"] > [is="option-bar"],
 [is="button-bar"] > [is="button-bar"]{
 	display: inline-block;
 }
 
+[is="option-bar"][has~="left-align"],
 [is="button-bar"][has~="left-align"]{
 	text-align: left;
 }
 
+[is="button-bar"] > [is="option-bar"][has~="left-align"],
 [is="button-bar"] > [is="button-bar"][has~="left-align"]{
 	float: left;
 }
 
-
+[is="button-bar"] > [is="option-bar"]:first-child:nth-last-child(2),
+[is="button-bar"] > [is="option-bar"]:first-child:nth-last-child(2) ~ [is="option-bar"],
 [is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(2),
 [is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(2) ~ [is="button-bar"] {
 	width: 50%;
 }
 
+[is="button-bar"] > [is="option-bar"]:first-child:nth-last-child(2),
+[is="button-bar"] > [is="option-bar"]:first-child:nth-last-child(2) ~ [is="button-bar"] > [is="option-bar"],
 [is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(2),
 [is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(2) ~ [is="button-bar"] > [is="button-bar"]{
 	text-align:left;
 }
 
+[is="button-bar"] > [is="option-bar"]:first-child:nth-last-child(3),
+[is="button-bar"] > [is="option-bar"]:first-child:nth-last-child(3) ~ [is="option-bar"],
 [is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(3),
 [is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(3) ~ [is="button-bar"] {
 	width: 33.33%;
 }
 
-
+[is="button-bar"] > [is="option-bar"]:first-child:nth-last-child(3) ~ [is="option-bar"],
 [is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(3) ~ [is="button-bar"]{
 	text-align:center;
 }
 
+[is="button-bar"] > [is="option-bar"]:first-child:nth-last-child(3) ~ [is="option-bar"]:last-child,
 [is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(3) ~ [is="button-bar"]:last-child{
 	text-align:right;
 }
 
+[is="button-bar"] > [is="option-bar"]:first-child:nth-last-child(3),
 [is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(3){
 	text-align:left;
 }
