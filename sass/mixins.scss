@@ -56,3 +56,21 @@
 	margin-top: pxToRem(- ($size + 2 * $size / 4) / 2);
 }
 
+@mixin flex-direction($direction){
+	-webkit-flex-direction: $direction;
+	-ms-flex-direction: $direction;
+	flex-direction: $direction;
+}
+
+@mixin flex-grow($grow){
+	-webkit-flex-grow: $grow;
+	-ms-flex-grow: $grow;
+	flex-grow: $grow;
+}
+
+@mixin flex-wrap($wrap){
+	-webkit-flex-grow: $wrap;
+	-ms-flex-grow: $wrap;
+	flex-wrap: $wrap;
+}
+

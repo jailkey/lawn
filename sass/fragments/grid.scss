@@ -1,25 +1,25 @@
 @import "../config/default";
+@import "../mixins";
 @import "../functions";
 
 [is="row"] {
+	display: -ms-flexbox;
 	display: flex;
 	font-size: 0;
-	display: flex;
-	flex-direction: row;
-	-webkit-flex-direction: row;
+	@include flex-direction(row);
 	flex-wrap: wrap;
 	justify-content: space-around;
+	width: 100%;
 }
 
 [is="column"] {
 	font-size: $standard-font-size;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
 	box-sizing: border-box;
-	flex-direction: column;
-	-webkit-flex-direction: column;
 	overflow: hidden;
-	-webkit-flex-grow: 1;
-	flex-grow: 1;
+	@include flex-direction(column);
+	@include flex-grow(1);
 	@if $grind-default-spacing == between {
 		padding-right: pxToRem($grid-space-between / 3);
 		padding-left: pxToRem($grid-space-between / 3);
@@ -73,17 +73,24 @@
 }
 
 
-
-
 //generate column width
 @for $i from 1 through 12 {
+	//generate standard column with
+	[is="row"]:not([has*="-columns"]) > [is="column"]:first-child:nth-last-child(#{$i}),
+	[is="row"]:not([has*="-columns"]) > [is="column"]:first-child:nth-last-child(#{$i}) ~ [is="column"]{
+		width: 100% / $i;
+	}
+
+	//special column with
 	[is="row"][has~="#{$i}-columns"] > [is="column"] { 
 		flex-basis: 100% / $i;
+		width: 100% / $i;
 	}
 
 	@for $y from 1 through $i { 
 		[is="row"][has~="#{$i}-columns"] > [is="column"][has~="#{$y}-columns-width"] { 
 			flex-basis: (100% / $i) * $y;
+			width: (100% / $i) * $y;
 		}
 		[is="row"][has~="#{$i}-columns"] > [is="column"][has~="#{$y}-columns-margin"] { 
 			margin-left: (100% / $i) * $y;
