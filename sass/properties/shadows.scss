@@ -1,6 +1,6 @@
-@import "../config/default";
-@import "../config/custom";
-@import "../mixins";
+@import "../config";
+
+
 
 [has~="no-shadow"]:hover,
 [has~="no-shadow"]{

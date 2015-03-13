@@ -74,3 +74,19 @@
 	flex-wrap: $wrap;
 }
 
+
+@mixin button-property($selector){
+	button[has~="#{$selector}"],
+	[role=button][has~="#{$selector}"],
+	[is="button"][has~="#{$selector}"]{
+		@content;
+	}
+}
+
+@mixin button-property-hover($selector){
+	button[has~="#{$selector}"]:hover,
+	[role=button][has~="#{$selector}"]:hover,
+	[is="button"][has~="#{$selector}"]:hover{
+		@content;
+	}
+}

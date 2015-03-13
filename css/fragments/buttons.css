@@ -17,6 +17,8 @@ button,
   vertical-align: text-bottom;
   box-sizing: content-box;
   max-height: 1.42857rem;
+  text-decoration: none;
+  border-radius: 0rem;
   transform: scale3d(1, 1, 1);
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -26,11 +28,11 @@ button,
 
 button:focus,
 button:hover,
-[role="butto"]:focus,
+[role="button"]:focus,
 [role="button"]:hover,
 [is="button"]:focus,
 [is="button"]:hover {
-  background-color: #007aa3; }
+  background-color: #006d90; }
 
 button:disabled,
 button[disabled],
@@ -109,7 +111,7 @@ button:before,
   margin-right: 0.5em; }
 
 .ripple-helper {
-  background: #00bfff;
+  background: #00b9f6;
   display: block;
   width: 1.42857rem;
   height: 1.42857rem;

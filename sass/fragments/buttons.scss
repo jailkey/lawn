@@ -1,14 +1,11 @@
-@import "../config/default";
-@import "../config/custom";
-@import "../mixins";
-@import "../functions";
+@import "../config";
 
 button,
 [role=button],
 [is="button"]{
-	background-color: $standard-button-color;
+	background-color:  button-color(primary, background);
 	padding: pxToRem($standard-button-padding-top-bottom) pxToRem($standard-button-padding-left-right);
-	color: $standard-button-font-color;
+	color:  button-color(primary, font);
 	font-size: pxToRem($standard-font-size);
 	line-height: pxToRem($standard-line-height);
 	cursor: pointer;
@@ -22,7 +19,8 @@ button,
 	vertical-align: text-bottom;
 	box-sizing: content-box;
 	max-height: pxToRem($standard-line-height);
-
+	text-decoration: none;
+	border-radius: pxToRem($button-rounded-corners);
 
 	transform: scale3d(1, 1, 1);
 	@if $button-shadows == on {
@@ -34,11 +32,11 @@ button,
 
 button:focus,
 button:hover,
-[role="butto"]:focus,
+[role="button"]:focus,
 [role="button"]:hover,
 [is="button"]:focus,
 [is="button"]:hover {
-	background-color: $standard-button-color-hover;
+	background-color: button-color(primary, hover);
 	@if $button-shadows == on {
 		@include depth(2);
 	}
@@ -53,8 +51,8 @@ button[state="loading"],
 [is="button"]:disabled,
 [is="button"][disabled],
 [is="button"][state="loading"]{
-	color: rgba($standard-button-font-color, 0.3);
-	background-color:  rgba($standard-button-color, 0.7);
+	color: rgba(button-color(primary, font), 0.3);
+	background-color:  rgba(button-color(primary, background), 0.7);
 }
 
 [role="button"]:disabled:hover,
@@ -63,7 +61,7 @@ button[state="loading"],
 [is="button"]:disabled:hover,
 [is="button"][disabled]:hover,
 [is="button"][state="loading"]:hover{
-	background-color: rgba($standard-button-color, 0.7);
+	background-color: rgba(button-color(primary, background), 0.7);
 	cursor: default;
 	@if $button-shadows == on {
 		@include depth(1);
@@ -139,7 +137,7 @@ button:before,
 
 
 .ripple-helper{
-	background:  $standard-button-color-active;
+	background:  button-color(primary, active);
 	display: block;
 	width: pxToRem(20px);
 	height: pxToRem(20px);

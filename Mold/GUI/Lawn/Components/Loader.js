@@ -43,9 +43,8 @@ Seed({
 
 
 			var setLoader = function(){
-				
 				var state = element.getAttribute("state");
-				console.log("state", state);
+				
 				//reset
 				new Elements('.bounce-animation').remove();
 
@@ -69,7 +68,6 @@ Seed({
 			}
 
 			setLoader();
-
 			Mold.watch(element, "state", setLoader);
 		}
 	}

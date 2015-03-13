@@ -1,15 +1,13 @@
+@import "../system/functions";
 //Standard Colors
+
 $standard-font-color: #222222;
 $invert-font-color: #ffffff;
 
-$primary-color: #0093c3;
-$primary-color-lighter: #00bfff;
-$primary-color-medium-dark: #007aa3;
-$primary-color-dark: #006282;
-
-$warn-color: #c36e00;
-$error-color: #c30000;
-$success-color: #20c300;
+$primary-color : get-shade-map(#0093c3);
+$warn-color: get-shade-map(#c36e00);
+$success-color: get-shade-map(#20c300);
+$error-color:  get-shade-map(#c30000);
 
 
 
@@ -63,6 +61,7 @@ $grid-space-evently: 5px;
 
 //buttons
 $button-shadows : off;
+$button-rounded-corners: 0px;
 
 $standard-button-padding-top-bottom: 10px;
 $standard-button-padding-left-right: 20px;
@@ -78,18 +77,37 @@ $small-button-padding-left-right: 10px;
 
 
 
-$standard-button-font-color: #ffffff;
-$standard-button-color: $primary-color;
-$standard-button-color-hover: $primary-color-medium-dark;
-$standard-button-color-active: $primary-color-lighter;
-$success-button-color: #20c300;
-$error-button-color: #c30000;
+$primary-button-color : (
+	font : #ffffff,
+	background : #0093c3,
+	hover : darken(#0093c3, 10),
+	active : lighten(#0093c3, 10),
+);
+
+$warn-button-color : (
+	font : #ffffff,
+	background : #c36e00,
+	hover :  darken(#c36e00, 10),
+	active :  lighten(#c36e00, 10)
+);
+
+$success-button-color : (
+	font : #ffffff,
+	background : #20c300,
+	hover :  darken(#20c300, 10),
+	active :  lighten(#20c300, 10)
+);
+
+$error-button-color : (
+	font : #ffffff,
+	background : #c30000,
+	hover :  darken(#c30000, 10),
+	active :  lighten(#c30000, 10)
+);
 
 
 
 
-
-$primary-color : "";
 $secondary-color : "";
 
 $mark-color : #ff0000;

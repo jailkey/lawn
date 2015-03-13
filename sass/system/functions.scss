@@ -1,6 +1,3 @@
-@import "config/default";
-@import "config/custom";
-
 @function pxToRem($px, $standard: $standard-font-size) {
 	@return ($px / $standard) * 1rem;
 }
@@ -21,4 +18,26 @@
 	$color: rgba(black, nth(.24 .23 .23 .22 .22, $depth));
 
 	@return 0 $primary-offset $blur $color;
+}
+
+@function color-from-map($color-name, $categroy, $type) {
+
+	@return map-get(map-get(map-get($colors, $color-name), $categroy), $type);
+}
+
+@function button-color($color-name, $type) {
+
+	@return map-get(map-get(map-get($colors, $color-name), buttons), $type);
+}
+
+
+@function get-shade-map($color){
+	$shades : (
+		standard : $color,
+		lighter : lighten($color, 10),
+		darker : darken($color, 10),
+		dark : darken($color, 20),
+	);
+
+	@return $shades;
 }

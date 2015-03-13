@@ -9,6 +9,7 @@ Seed({
 			{
 				at : "attribute",
 				name : "state",
+				value : "loading",
 				watchable : true,
 				collect : {
 					attribute : [
@@ -23,17 +24,17 @@ Seed({
 		var _loader = false;
 		
 		var test = function(){
+			if(_loader){
+				_loader.remove();
+				_loader = false;
+			}
 			if(element.getAttribute('state') === "loading"){
 				_loader = new Element("x-loader");
 				element.append(_loader);
-			}else{
-				if(_loader){
-					_loader.remove();
-				}
 			}
 		}
 
-
+	
 		Mold.watch(collection, 'state', test);
 
 		test();

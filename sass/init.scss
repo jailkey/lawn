@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import "config/default";
-@import "config/custom";
+@import "config";
+
 //reset margin and paddings and set default fonts;
 html * {
 	margin: 0;

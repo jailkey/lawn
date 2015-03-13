@@ -5,7 +5,7 @@ Ein semantisches CSS (SCSS) / JavaScript GUI Framework.
 
 ###Noch ein GUI Framework?
 lawn wurde konzipiert um eleganten, sprechenden Quelltext zu schreiben. CSS-Klassen wie "col-md-8", oder schlimmer BEM Bezeichner wie "sidebar__navigation--secondary" sind ziemlich hässlich.
-lawn arbeitet im Gegensatz zu herkömmlichen Frameworks nicht mit Klassen sondern mit speziellen Attributen. Dass sorgt dafür das sich der Quelltext (fast) wie Aufsatz ließt. Klassen werden erst vom Nutzer vergeben um benutzerdefiniert Modifikationen vorzunehmen, so zu sagen als "custom-layer".
+lawn arbeitet im Gegensatz zu herkömmlichen Frameworks nicht mit Klassen sondern mit speziellen Attributen. Dass sorgt dafür das sich der Quelltext (fast) wie ein Aufsatz ließt. Klassen werden erst vom Nutzer vergeben um benutzerdefiniert Modifikationen vorzunehmen, so zu sagen als "custom-layer".
 
 ###Wie funktioniert lawn genau?
 Alle Elemente in lawn werden über die attribute "is", "has", "state", "behavior" konfiguriert, dass heißt es werden bestimmte Styles gesetzt und Verhalten hinzugefügt. Jedes der Attribute hat eine bestimmte Funktion:
@@ -21,7 +21,7 @@ Dazu ein kleines Beispiel:
   has="icon-note shadow-depth-1"
   behavior="grow-on-touch" 
   state="loading"
-> 
+ > 
 	Ich bin ein Button 
 </a>
 ```

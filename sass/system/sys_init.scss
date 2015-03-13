@@ -1,0 +1,24 @@
+@import "../config/default";
+@import "../config/custom";
+
+//Create $colors array
+
+$colors : (
+	primary : (
+		colors : $primary-color,
+		buttons : $primary-button-color
+	),
+	warn : (
+		colors : $warn-color,
+		buttons : $warn-button-color
+	),
+	success : (
+		colors : $success-color,
+		buttons : $success-button-color
+	),
+	error : (
+		colors : $error-color,
+		buttons : $error-button-color
+	)
+);
+

@@ -1,7 +1,4 @@
-@import "../config/default";
-@import "../config/custom";
-@import "../functions";
-
+@import "../config";
 
 [has~="big-size"]{
 	font-size: pxToRem($big-font-size);

@@ -1,0 +1,30 @@
+@import "../config";
+
+@each $color, $key in $colors {
+
+	[is][has~="#{$color}-bgcolor"],
+	[has~="#{$color}-bgcolor"]{
+		background-color: color-from-map($color, colors, standard);
+	}
+
+	[is][has~="#{$color}-color"],
+	[has~="#{$color}-color"]{
+		color: color-from-map($color, colors, standard);
+	}
+
+	@include button-property("#{$color}-bgcolor"){
+		background-color: color-from-map($color, buttons, background);
+
+		.ripple-helper{
+			background:  button-color($color, active);
+		}
+	}
+
+	@include button-property-hover("#{$color}-bgcolor"){
+		background-color: color-from-map($color, buttons, hover);
+	}
+
+	@include button-property("#{$color}-color"){
+		color: color-from-map($color, buttons, background);
+	}
+}

@@ -1,3 +1,109 @@
+[is][has~="primary-bgcolor"],
+[has~="primary-bgcolor"] {
+  background-color: #0093c3; }
 
+[is][has~="primary-color"],
+[has~="primary-color"] {
+  color: #0093c3; }
+
+button[has~="primary-bgcolor"],
+[role=button][has~="primary-bgcolor"],
+[is="button"][has~="primary-bgcolor"] {
+  background-color: #0093c3; }
+  button[has~="primary-bgcolor"] .ripple-helper,
+  [role=button][has~="primary-bgcolor"] .ripple-helper,
+  [is="button"][has~="primary-bgcolor"] .ripple-helper {
+    background: #00b9f6; }
+
+button[has~="primary-bgcolor"]:hover,
+[role=button][has~="primary-bgcolor"]:hover,
+[is="button"][has~="primary-bgcolor"]:hover {
+  background-color: #006d90; }
+
+button[has~="primary-color"],
+[role=button][has~="primary-color"],
+[is="button"][has~="primary-color"] {
+  color: #0093c3; }
+
+[is][has~="warn-bgcolor"],
+[has~="warn-bgcolor"] {
+  background-color: #c36e00; }
+
+[is][has~="warn-color"],
+[has~="warn-color"] {
+  color: #c36e00; }
+
+button[has~="warn-bgcolor"],
+[role=button][has~="warn-bgcolor"],
+[is="button"][has~="warn-bgcolor"] {
+  background-color: #c36e00; }
+  button[has~="warn-bgcolor"] .ripple-helper,
+  [role=button][has~="warn-bgcolor"] .ripple-helper,
+  [is="button"][has~="warn-bgcolor"] .ripple-helper {
+    background: #f68b00; }
+
+button[has~="warn-bgcolor"]:hover,
+[role=button][has~="warn-bgcolor"]:hover,
+[is="button"][has~="warn-bgcolor"]:hover {
+  background-color: #905100; }
+
+button[has~="warn-color"],
+[role=button][has~="warn-color"],
+[is="button"][has~="warn-color"] {
+  color: #c36e00; }
+
+[is][has~="success-bgcolor"],
+[has~="success-bgcolor"] {
+  background-color: #20c300; }
+
+[is][has~="success-color"],
+[has~="success-color"] {
+  color: #20c300; }
+
+button[has~="success-bgcolor"],
+[role=button][has~="success-bgcolor"],
+[is="button"][has~="success-bgcolor"] {
+  background-color: #20c300; }
+  button[has~="success-bgcolor"] .ripple-helper,
+  [role=button][has~="success-bgcolor"] .ripple-helper,
+  [is="button"][has~="success-bgcolor"] .ripple-helper {
+    background: #28f600; }
+
+button[has~="success-bgcolor"]:hover,
+[role=button][has~="success-bgcolor"]:hover,
+[is="button"][has~="success-bgcolor"]:hover {
+  background-color: #189000; }
+
+button[has~="success-color"],
+[role=button][has~="success-color"],
+[is="button"][has~="success-color"] {
+  color: #20c300; }
+
+[is][has~="error-bgcolor"],
+[has~="error-bgcolor"] {
+  background-color: #c30000; }
+
+[is][has~="error-color"],
+[has~="error-color"] {
+  color: #c30000; }
+
+button[has~="error-bgcolor"],
+[role=button][has~="error-bgcolor"],
+[is="button"][has~="error-bgcolor"] {
+  background-color: #c30000; }
+  button[has~="error-bgcolor"] .ripple-helper,
+  [role=button][has~="error-bgcolor"] .ripple-helper,
+  [is="button"][has~="error-bgcolor"] .ripple-helper {
+    background: #f60000; }
+
+button[has~="error-bgcolor"]:hover,
+[role=button][has~="error-bgcolor"]:hover,
+[is="button"][has~="error-bgcolor"]:hover {
+  background-color: #900000; }
+
+button[has~="error-color"],
+[role=button][has~="error-color"],
+[is="button"][has~="error-color"] {
+  color: #c30000; }
 
 /*# sourceMappingURL=colors.css.map */

@@ -79,7 +79,7 @@ Seed({
 					}
 				], growTime , "ease-out")
 				.then(function(){
-					helper.remove();	
+					//helper.remove();	
 				});
 			}
 			
