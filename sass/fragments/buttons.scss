@@ -31,15 +31,24 @@ button,
 }
 
 
-button:not([state="disabled"]):not([state="loading"]):hover,
-[role=button]:not([state="disabled"]):not([state="loading"]):hover,
-[is="button"]:not([state="disabled"]):not([state="loading"]):hover{
-	background-color: button-color(primary, hover);
-	@if $button-shadows == on {
-		@include depth(2);
+@include button-selector(){
+	&:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover{
+		background-color: button-color(primary, hover);
+		@if $button-shadows == on {
+			@include depth(2);
+		}
 	}
 }
 
+
+
+@include button-selector(){
+	&[state="selected"]{
+		background-color: button-color(primary, select);
+		box-shadow: inset 0 (-$button-selected-underline) 0px button-color(primary, background);
+		color: rgba(button-color(primary, font), 0.9);
+	}
+}
 
 
 button:disabled,

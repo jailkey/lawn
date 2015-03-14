@@ -73,8 +73,8 @@ $grid-space-evently: 5px;
 //buttons
 $button-shadows : off;
 $button-rounded-corners: 0px;
-
 $button-seperator-width: 2px;
+$button-selected-underline: 4px;
 
 $standard-button-padding-top-bottom: 10px;
 $standard-button-padding-left-right: 20px;
@@ -94,6 +94,7 @@ $primary-button-color : (
 	font : #ffffff,
 	background : #0093c3,
 	hover : darken(#0093c3, 10),
+	select : darken(#0093c3, 20),
 	active : lighten(#0093c3, 10),
 );
 
@@ -101,6 +102,7 @@ $secondary-button-color : (
 	font : #ffffff,
 	background : $secondary-color,
 	hover : darken($secondary-color, 10),
+	select : darken($secondary-color, 20),
 	active : lighten($secondary-color, 10),
 );
 
@@ -108,6 +110,7 @@ $tertiary-button-color : (
 	font : #ffffff,
 	background : $tertiary-color,
 	hover : darken($tertiary-color, 10),
+	select : darken($tertiary-color, 20),
 	active : lighten($tertiary-color, 10),
 );
 
@@ -115,6 +118,7 @@ $quaternary-button-color : (
 	font : #ffffff,
 	background : $quaternary-color,
 	hover : darken($quaternary-color, 10),
+	select : darken($quaternary-color, 20),
 	active : lighten($quaternary-color, 10),
 );
 
@@ -124,6 +128,7 @@ $black-button-color : (
 	background : #000000,
 	hover : lighten(#000000, 20),
 	active : lighten(#000000, 30),
+	select : lighten(#000000, 10),
 	ripple : #666666
 );
 
@@ -131,6 +136,7 @@ $white-button-color : (
 	font : #000000,
 	background : #ffffff,
 	hover : darken(#ffffff, 10),
+	select : darken(#ffffff, 20),
 	active : lighten(#ffffff, 10),
 	ripple : $primary-color
 );
@@ -141,21 +147,24 @@ $warn-button-color : (
 	font : #ffffff,
 	background : #c36e00,
 	hover : darken(#c36e00, 10),
-	active : lighten(#c36e00, 10)
+	active : lighten(#c36e00, 10),
+	selected : darken(#c36e00, 20),
 );
 
 $success-button-color : (
 	font : #ffffff,
 	background : #20c300,
 	hover :  darken(#20c300, 10),
-	active :  lighten(#20c300, 10)
+	active :  lighten(#20c300, 10),
+	selected : darken(#c36e00, 20),
 );
 
 $error-button-color : (
 	font : #ffffff,
 	background : #c30000,
 	hover : darken(#c30000, 10),
-	active : lighten(#c30000, 10)
+	active : lighten(#c30000, 10),
+	selected : darken(#c30000, 20),
 );
 
 

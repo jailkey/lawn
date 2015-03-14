@@ -20,7 +20,7 @@ Seed({
 	function(node, element, collection){
 		var _animation = false;
 		
-		element.on("mousedown", function(e){
+		element.on("click", function(e){
 			
 			if(
 				element.getAttribute("state") !== "loading"

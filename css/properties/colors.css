@@ -18,6 +18,14 @@ button[has~="primary-background"],
   [is="button"][has~="primary-background"] .ripple-helper {
     background: #00b9f6; }
 
+button[state="selected"][has~="primary-background"],
+[role=button][state="selected"][has~="primary-background"],
+[type=button][state="selected"][has~="primary-background"],
+[is="button"][state="selected"][has~="primary-background"] {
+  background-color: #00465d;
+  box-shadow: inset 0 -4px 0px #0093c3;
+  color: rgba(255, 255, 255, 0.9); }
+
 button:disabled[has~="primary-background"],
 button[disabled][has~="primary-background"],
 button[state="loading"][has~="primary-background"],
@@ -30,9 +38,9 @@ button[state="loading"][has~="primary-background"],
   color: rgba(255, 255, 255, 0.3);
   background-color: rgba(0, 147, 195, 0.7); }
 
-button[has~="primary-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[role=button][has~="primary-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[is="button"][has~="primary-background"]:not([state="disabled"]):not([state="loading"]):hover {
+button[has~="primary-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[role=button][has~="primary-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[is="button"][has~="primary-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover {
   background-color: #006d90; }
 
 button[has~="primary-color"],
@@ -61,6 +69,14 @@ button[has~="secondary-background"],
   [is="button"][has~="secondary-background"] .ripple-helper {
     background: #d201f2; }
 
+button[state="selected"][has~="secondary-background"],
+[role=button][state="selected"][has~="secondary-background"],
+[type=button][state="selected"][has~="secondary-background"],
+[is="button"][state="selected"][has~="secondary-background"] {
+  background-color: #4e005a;
+  box-shadow: inset 0 -4px 0px #a601bf;
+  color: rgba(255, 255, 255, 0.9); }
+
 button:disabled[has~="secondary-background"],
 button[disabled][has~="secondary-background"],
 button[state="loading"][has~="secondary-background"],
@@ -73,9 +89,9 @@ button[state="loading"][has~="secondary-background"],
   color: rgba(255, 255, 255, 0.3);
   background-color: rgba(166, 1, 191, 0.7); }
 
-button[has~="secondary-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[role=button][has~="secondary-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[is="button"][has~="secondary-background"]:not([state="disabled"]):not([state="loading"]):hover {
+button[has~="secondary-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[role=button][has~="secondary-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[is="button"][has~="secondary-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover {
   background-color: #7a018c; }
 
 button[has~="secondary-color"],
@@ -104,6 +120,14 @@ button[has~="tertiary-background"],
   [is="button"][has~="tertiary-background"] .ripple-helper {
     background: #00f6c5; }
 
+button[state="selected"][has~="tertiary-background"],
+[role=button][state="selected"][has~="tertiary-background"],
+[type=button][state="selected"][has~="tertiary-background"],
+[is="button"][state="selected"][has~="tertiary-background"] {
+  background-color: #005d4a;
+  box-shadow: inset 0 -4px 0px #00c39c;
+  color: rgba(255, 255, 255, 0.9); }
+
 button:disabled[has~="tertiary-background"],
 button[disabled][has~="tertiary-background"],
 button[state="loading"][has~="tertiary-background"],
@@ -116,9 +140,9 @@ button[state="loading"][has~="tertiary-background"],
   color: rgba(255, 255, 255, 0.3);
   background-color: rgba(0, 195, 156, 0.7); }
 
-button[has~="tertiary-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[role=button][has~="tertiary-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[is="button"][has~="tertiary-background"]:not([state="disabled"]):not([state="loading"]):hover {
+button[has~="tertiary-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[role=button][has~="tertiary-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[is="button"][has~="tertiary-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover {
   background-color: #009073; }
 
 button[has~="tertiary-color"],
@@ -147,6 +171,14 @@ button[has~="quaternary-background"],
   [is="button"][has~="quaternary-background"] .ripple-helper {
     background: #ffcf2a; }
 
+button[state="selected"][has~="quaternary-background"],
+[role=button][state="selected"][has~="quaternary-background"],
+[type=button][state="selected"][has~="quaternary-background"],
+[is="button"][state="selected"][has~="quaternary-background"] {
+  background-color: #907000;
+  box-shadow: inset 0 -4px 0px #f6bf00;
+  color: rgba(255, 255, 255, 0.9); }
+
 button:disabled[has~="quaternary-background"],
 button[disabled][has~="quaternary-background"],
 button[state="loading"][has~="quaternary-background"],
@@ -159,9 +191,9 @@ button[state="loading"][has~="quaternary-background"],
   color: rgba(255, 255, 255, 0.3);
   background-color: rgba(246, 191, 0, 0.7); }
 
-button[has~="quaternary-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[role=button][has~="quaternary-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[is="button"][has~="quaternary-background"]:not([state="disabled"]):not([state="loading"]):hover {
+button[has~="quaternary-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[role=button][has~="quaternary-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[is="button"][has~="quaternary-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover {
   background-color: #c39700; }
 
 button[has~="quaternary-color"],
@@ -190,6 +222,14 @@ button[has~="black-background"],
   [is="button"][has~="black-background"] .ripple-helper {
     background: #666666; }
 
+button[state="selected"][has~="black-background"],
+[role=button][state="selected"][has~="black-background"],
+[type=button][state="selected"][has~="black-background"],
+[is="button"][state="selected"][has~="black-background"] {
+  background-color: #1a1a1a;
+  box-shadow: inset 0 -4px 0px #000000;
+  color: rgba(255, 255, 255, 0.9); }
+
 button:disabled[has~="black-background"],
 button[disabled][has~="black-background"],
 button[state="loading"][has~="black-background"],
@@ -202,9 +242,9 @@ button[state="loading"][has~="black-background"],
   color: rgba(255, 255, 255, 0.3);
   background-color: rgba(0, 0, 0, 0.7); }
 
-button[has~="black-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[role=button][has~="black-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[is="button"][has~="black-background"]:not([state="disabled"]):not([state="loading"]):hover {
+button[has~="black-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[role=button][has~="black-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[is="button"][has~="black-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover {
   background-color: #333333; }
 
 button[has~="black-color"],
@@ -233,6 +273,14 @@ button[has~="white-background"],
   [is="button"][has~="white-background"] .ripple-helper {
     background: #0093c3; }
 
+button[state="selected"][has~="white-background"],
+[role=button][state="selected"][has~="white-background"],
+[type=button][state="selected"][has~="white-background"],
+[is="button"][state="selected"][has~="white-background"] {
+  background-color: #cccccc;
+  box-shadow: inset 0 -4px 0px #ffffff;
+  color: rgba(0, 0, 0, 0.9); }
+
 button:disabled[has~="white-background"],
 button[disabled][has~="white-background"],
 button[state="loading"][has~="white-background"],
@@ -245,9 +293,9 @@ button[state="loading"][has~="white-background"],
   color: rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.7); }
 
-button[has~="white-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[role=button][has~="white-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[is="button"][has~="white-background"]:not([state="disabled"]):not([state="loading"]):hover {
+button[has~="white-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[role=button][has~="white-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[is="button"][has~="white-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover {
   background-color: #e6e6e6; }
 
 button[has~="white-color"],
@@ -276,6 +324,13 @@ button[has~="warn-background"],
   [is="button"][has~="warn-background"] .ripple-helper {
     background: #f68b00; }
 
+button[state="selected"][has~="warn-background"],
+[role=button][state="selected"][has~="warn-background"],
+[type=button][state="selected"][has~="warn-background"],
+[is="button"][state="selected"][has~="warn-background"] {
+  box-shadow: inset 0 -4px 0px #c36e00;
+  color: rgba(255, 255, 255, 0.9); }
+
 button:disabled[has~="warn-background"],
 button[disabled][has~="warn-background"],
 button[state="loading"][has~="warn-background"],
@@ -288,9 +343,9 @@ button[state="loading"][has~="warn-background"],
   color: rgba(255, 255, 255, 0.3);
   background-color: rgba(195, 110, 0, 0.7); }
 
-button[has~="warn-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[role=button][has~="warn-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[is="button"][has~="warn-background"]:not([state="disabled"]):not([state="loading"]):hover {
+button[has~="warn-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[role=button][has~="warn-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[is="button"][has~="warn-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover {
   background-color: #905100; }
 
 button[has~="warn-color"],
@@ -319,6 +374,13 @@ button[has~="success-background"],
   [is="button"][has~="success-background"] .ripple-helper {
     background: #28f600; }
 
+button[state="selected"][has~="success-background"],
+[role=button][state="selected"][has~="success-background"],
+[type=button][state="selected"][has~="success-background"],
+[is="button"][state="selected"][has~="success-background"] {
+  box-shadow: inset 0 -4px 0px #20c300;
+  color: rgba(255, 255, 255, 0.9); }
+
 button:disabled[has~="success-background"],
 button[disabled][has~="success-background"],
 button[state="loading"][has~="success-background"],
@@ -331,9 +393,9 @@ button[state="loading"][has~="success-background"],
   color: rgba(255, 255, 255, 0.3);
   background-color: rgba(32, 195, 0, 0.7); }
 
-button[has~="success-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[role=button][has~="success-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[is="button"][has~="success-background"]:not([state="disabled"]):not([state="loading"]):hover {
+button[has~="success-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[role=button][has~="success-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[is="button"][has~="success-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover {
   background-color: #189000; }
 
 button[has~="success-color"],
@@ -362,6 +424,13 @@ button[has~="error-background"],
   [is="button"][has~="error-background"] .ripple-helper {
     background: #f60000; }
 
+button[state="selected"][has~="error-background"],
+[role=button][state="selected"][has~="error-background"],
+[type=button][state="selected"][has~="error-background"],
+[is="button"][state="selected"][has~="error-background"] {
+  box-shadow: inset 0 -4px 0px #c30000;
+  color: rgba(255, 255, 255, 0.9); }
+
 button:disabled[has~="error-background"],
 button[disabled][has~="error-background"],
 button[state="loading"][has~="error-background"],
@@ -374,9 +443,9 @@ button[state="loading"][has~="error-background"],
   color: rgba(255, 255, 255, 0.3);
   background-color: rgba(195, 0, 0, 0.7); }
 
-button[has~="error-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[role=button][has~="error-background"]:not([state="disabled"]):not([state="loading"]):hover,
-[is="button"][has~="error-background"]:not([state="disabled"]):not([state="loading"]):hover {
+button[has~="error-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[role=button][has~="error-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[is="button"][has~="error-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover {
   background-color: #900000; }
 
 button[has~="error-color"],

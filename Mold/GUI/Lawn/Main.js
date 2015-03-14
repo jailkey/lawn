@@ -4,10 +4,11 @@ Seed({
 		include : [
 			".Ripple",
 			".Loading",
-			".Components.Loader"
+			".Components.Loader",
+			".Components.OptionBar"
 		]
 	},
 	function(){
-		console.log("AMIN")
+		console.log("GO")
 	}
 )

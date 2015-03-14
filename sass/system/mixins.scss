@@ -109,9 +109,9 @@
 
 
 @mixin button-property-hover($selector){
-	button[has~="#{$selector}"]:not([state="disabled"]):not([state="loading"]):hover,
-	[role=button][has~="#{$selector}"]:not([state="disabled"]):not([state="loading"]):hover,
-	[is="button"][has~="#{$selector}"]:not([state="disabled"]):not([state="loading"]):hover{
+	button[has~="#{$selector}"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+	[role=button][has~="#{$selector}"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+	[is="button"][has~="#{$selector}"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover{
 		@content;
 	}
 }
