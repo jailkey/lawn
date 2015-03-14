@@ -5,19 +5,39 @@
 
 $colors : (
 	primary : (
-		colors : $primary-color,
+		colors : $primary-colors,
 		buttons : $primary-button-color
 	),
+	secondary : (
+		colors : $secondary-colors,
+		buttons : $secondary-button-color
+	),
+	tertiary : (
+		colors : $tertiary-colors,
+		buttons : $tertiary-button-color
+	),
+	quaternary : (
+		colors : $quaternary-colors,
+		buttons : $quaternary-button-color
+	),
+	black : (
+		colors : $black-colors,
+		buttons : $black-button-color
+	),
+	white : (
+		colors : $white-colors,
+		buttons : $white-button-color
+	),
 	warn : (
-		colors : $warn-color,
+		colors : $warn-colors,
 		buttons : $warn-button-color
 	),
 	success : (
-		colors : $success-color,
+		colors : $success-colors,
 		buttons : $success-button-color
 	),
 	error : (
-		colors : $error-color,
+		colors : $error-colors,
 		buttons : $error-button-color
 	)
 );

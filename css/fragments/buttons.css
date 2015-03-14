@@ -26,12 +26,9 @@ button,
   user-select: none;
   -mold-ripple: button; }
 
-button:focus,
-button:hover,
-[role="button"]:focus,
-[role="button"]:hover,
-[is="button"]:focus,
-[is="button"]:hover {
+button:not([state="disabled"]):not([state="loading"]):hover,
+[role=button]:not([state="disabled"]):not([state="loading"]):hover,
+[is="button"]:not([state="disabled"]):not([state="loading"]):hover {
   background-color: #006d90; }
 
 button:disabled,
@@ -45,15 +42,6 @@ button[state="loading"],
 [is="button"][state="loading"] {
   color: rgba(255, 255, 255, 0.3);
   background-color: rgba(0, 147, 195, 0.7); }
-
-[role="button"]:disabled:hover,
-[role="button"][disabled]:hover,
-[role="button"][state="loading"]:hover,
-[is="button"]:disabled:hover,
-[is="button"][disabled]:hover,
-[is="button"][state="loading"]:hover {
-  background-color: rgba(0, 147, 195, 0.7);
-  cursor: default; }
 
 button[has~="big-size"],
 [role="button"][has~="big-size"],
@@ -181,5 +169,16 @@ button:before,
 [is="button-bar"] > [is="option-bar"]:first-child:nth-last-child(3),
 [is="button-bar"] > [is="button-bar"]:first-child:nth-last-child(3) {
   text-align: left; }
+
+[is="button-bar"][has~="seperator"] > button,
+[is="button-bar"][has~="seperator"] > [role=button],
+[is="button-bar"][has~="seperator"] > [type=button],
+[is="button-bar"][has~="seperator"] > [is="button"] {
+  border-right: 0.14286rem solid #ffffff; }
+  [is="button-bar"][has~="seperator"] > button:last-child,
+  [is="button-bar"][has~="seperator"] > [role=button]:last-child,
+  [is="button-bar"][has~="seperator"] > [type=button]:last-child,
+  [is="button-bar"][has~="seperator"] > [is="button"]:last-child {
+    border-right: none; }
 
 /*# sourceMappingURL=buttons.css.map */

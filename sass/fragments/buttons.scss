@@ -30,17 +30,17 @@ button,
 	-mold-ripple : button;
 }
 
-button:focus,
-button:hover,
-[role="button"]:focus,
-[role="button"]:hover,
-[is="button"]:focus,
-[is="button"]:hover {
+
+button:not([state="disabled"]):not([state="loading"]):hover,
+[role=button]:not([state="disabled"]):not([state="loading"]):hover,
+[is="button"]:not([state="disabled"]):not([state="loading"]):hover{
 	background-color: button-color(primary, hover);
 	@if $button-shadows == on {
 		@include depth(2);
 	}
 }
+
+
 
 button:disabled,
 button[disabled],
@@ -55,18 +55,6 @@ button[state="loading"],
 	background-color:  rgba(button-color(primary, background), 0.7);
 }
 
-[role="button"]:disabled:hover,
-[role="button"][disabled]:hover,
-[role="button"][state="loading"]:hover,
-[is="button"]:disabled:hover,
-[is="button"][disabled]:hover,
-[is="button"][state="loading"]:hover{
-	background-color: rgba(button-color(primary, background), 0.7);
-	cursor: default;
-	@if $button-shadows == on {
-		@include depth(1);
-	}
-}
 
 
 button[has~="big-size"], 
@@ -223,6 +211,16 @@ button:before,
 	text-align:left;
 }
 
+//seperator
+[is="button-bar"][has~="seperator"] > {
+	@include button-selector(){
+		border-right: pxToRem($button-seperator-width) solid #ffffff;
+
+		&:last-child{
+			border-right: none;
+		}
+	}
+}
 
 	
 	

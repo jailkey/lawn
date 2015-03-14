@@ -1,108 +1,387 @@
-[is][has~="primary-bgcolor"],
-[has~="primary-bgcolor"] {
+[is][has~="primary-background"],
+[has~="primary-background"] {
   background-color: #0093c3; }
 
 [is][has~="primary-color"],
 [has~="primary-color"] {
   color: #0093c3; }
 
-button[has~="primary-bgcolor"],
-[role=button][has~="primary-bgcolor"],
-[is="button"][has~="primary-bgcolor"] {
-  background-color: #0093c3; }
-  button[has~="primary-bgcolor"] .ripple-helper,
-  [role=button][has~="primary-bgcolor"] .ripple-helper,
-  [is="button"][has~="primary-bgcolor"] .ripple-helper {
+button[has~="primary-background"],
+[role=button][has~="primary-background"],
+[type=button][has~="primary-background"],
+[is="button"][has~="primary-background"] {
+  background-color: #0093c3;
+  color: #ffffff; }
+  button[has~="primary-background"] .ripple-helper,
+  [role=button][has~="primary-background"] .ripple-helper,
+  [type=button][has~="primary-background"] .ripple-helper,
+  [is="button"][has~="primary-background"] .ripple-helper {
     background: #00b9f6; }
 
-button[has~="primary-bgcolor"]:hover,
-[role=button][has~="primary-bgcolor"]:hover,
-[is="button"][has~="primary-bgcolor"]:hover {
+button:disabled[has~="primary-background"],
+button[disabled][has~="primary-background"],
+button[state="loading"][has~="primary-background"],
+[role="button"]:disabled[has~="primary-background"],
+[role="button"][disabled][has~="primary-background"],
+[role="button"][state="loading"][has~="primary-background"],
+[is="button"]:disabled[has~="primary-background"],
+[is="button"][disabled][has~="primary-background"],
+[is="button"][state="loading"][has~="primary-background"] {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 147, 195, 0.7); }
+
+button[has~="primary-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[role=button][has~="primary-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[is="button"][has~="primary-background"]:not([state="disabled"]):not([state="loading"]):hover {
   background-color: #006d90; }
 
 button[has~="primary-color"],
 [role=button][has~="primary-color"],
+[type=button][has~="primary-color"],
 [is="button"][has~="primary-color"] {
   color: #0093c3; }
 
-[is][has~="warn-bgcolor"],
-[has~="warn-bgcolor"] {
+[is][has~="secondary-background"],
+[has~="secondary-background"] {
+  background-color: #a601bf; }
+
+[is][has~="secondary-color"],
+[has~="secondary-color"] {
+  color: #a601bf; }
+
+button[has~="secondary-background"],
+[role=button][has~="secondary-background"],
+[type=button][has~="secondary-background"],
+[is="button"][has~="secondary-background"] {
+  background-color: #a601bf;
+  color: #ffffff; }
+  button[has~="secondary-background"] .ripple-helper,
+  [role=button][has~="secondary-background"] .ripple-helper,
+  [type=button][has~="secondary-background"] .ripple-helper,
+  [is="button"][has~="secondary-background"] .ripple-helper {
+    background: #d201f2; }
+
+button:disabled[has~="secondary-background"],
+button[disabled][has~="secondary-background"],
+button[state="loading"][has~="secondary-background"],
+[role="button"]:disabled[has~="secondary-background"],
+[role="button"][disabled][has~="secondary-background"],
+[role="button"][state="loading"][has~="secondary-background"],
+[is="button"]:disabled[has~="secondary-background"],
+[is="button"][disabled][has~="secondary-background"],
+[is="button"][state="loading"][has~="secondary-background"] {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(166, 1, 191, 0.7); }
+
+button[has~="secondary-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[role=button][has~="secondary-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[is="button"][has~="secondary-background"]:not([state="disabled"]):not([state="loading"]):hover {
+  background-color: #7a018c; }
+
+button[has~="secondary-color"],
+[role=button][has~="secondary-color"],
+[type=button][has~="secondary-color"],
+[is="button"][has~="secondary-color"] {
+  color: #a601bf; }
+
+[is][has~="tertiary-background"],
+[has~="tertiary-background"] {
+  background-color: #00c39c; }
+
+[is][has~="tertiary-color"],
+[has~="tertiary-color"] {
+  color: #00c39c; }
+
+button[has~="tertiary-background"],
+[role=button][has~="tertiary-background"],
+[type=button][has~="tertiary-background"],
+[is="button"][has~="tertiary-background"] {
+  background-color: #00c39c;
+  color: #ffffff; }
+  button[has~="tertiary-background"] .ripple-helper,
+  [role=button][has~="tertiary-background"] .ripple-helper,
+  [type=button][has~="tertiary-background"] .ripple-helper,
+  [is="button"][has~="tertiary-background"] .ripple-helper {
+    background: #00f6c5; }
+
+button:disabled[has~="tertiary-background"],
+button[disabled][has~="tertiary-background"],
+button[state="loading"][has~="tertiary-background"],
+[role="button"]:disabled[has~="tertiary-background"],
+[role="button"][disabled][has~="tertiary-background"],
+[role="button"][state="loading"][has~="tertiary-background"],
+[is="button"]:disabled[has~="tertiary-background"],
+[is="button"][disabled][has~="tertiary-background"],
+[is="button"][state="loading"][has~="tertiary-background"] {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 195, 156, 0.7); }
+
+button[has~="tertiary-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[role=button][has~="tertiary-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[is="button"][has~="tertiary-background"]:not([state="disabled"]):not([state="loading"]):hover {
+  background-color: #009073; }
+
+button[has~="tertiary-color"],
+[role=button][has~="tertiary-color"],
+[type=button][has~="tertiary-color"],
+[is="button"][has~="tertiary-color"] {
+  color: #00c39c; }
+
+[is][has~="quaternary-background"],
+[has~="quaternary-background"] {
+  background-color: #f6bf00; }
+
+[is][has~="quaternary-color"],
+[has~="quaternary-color"] {
+  color: #f6bf00; }
+
+button[has~="quaternary-background"],
+[role=button][has~="quaternary-background"],
+[type=button][has~="quaternary-background"],
+[is="button"][has~="quaternary-background"] {
+  background-color: #f6bf00;
+  color: #ffffff; }
+  button[has~="quaternary-background"] .ripple-helper,
+  [role=button][has~="quaternary-background"] .ripple-helper,
+  [type=button][has~="quaternary-background"] .ripple-helper,
+  [is="button"][has~="quaternary-background"] .ripple-helper {
+    background: #ffcf2a; }
+
+button:disabled[has~="quaternary-background"],
+button[disabled][has~="quaternary-background"],
+button[state="loading"][has~="quaternary-background"],
+[role="button"]:disabled[has~="quaternary-background"],
+[role="button"][disabled][has~="quaternary-background"],
+[role="button"][state="loading"][has~="quaternary-background"],
+[is="button"]:disabled[has~="quaternary-background"],
+[is="button"][disabled][has~="quaternary-background"],
+[is="button"][state="loading"][has~="quaternary-background"] {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(246, 191, 0, 0.7); }
+
+button[has~="quaternary-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[role=button][has~="quaternary-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[is="button"][has~="quaternary-background"]:not([state="disabled"]):not([state="loading"]):hover {
+  background-color: #c39700; }
+
+button[has~="quaternary-color"],
+[role=button][has~="quaternary-color"],
+[type=button][has~="quaternary-color"],
+[is="button"][has~="quaternary-color"] {
+  color: #f6bf00; }
+
+[is][has~="black-background"],
+[has~="black-background"] {
+  background-color: #000000; }
+
+[is][has~="black-color"],
+[has~="black-color"] {
+  color: #000000; }
+
+button[has~="black-background"],
+[role=button][has~="black-background"],
+[type=button][has~="black-background"],
+[is="button"][has~="black-background"] {
+  background-color: #000000;
+  color: #ffffff; }
+  button[has~="black-background"] .ripple-helper,
+  [role=button][has~="black-background"] .ripple-helper,
+  [type=button][has~="black-background"] .ripple-helper,
+  [is="button"][has~="black-background"] .ripple-helper {
+    background: #666666; }
+
+button:disabled[has~="black-background"],
+button[disabled][has~="black-background"],
+button[state="loading"][has~="black-background"],
+[role="button"]:disabled[has~="black-background"],
+[role="button"][disabled][has~="black-background"],
+[role="button"][state="loading"][has~="black-background"],
+[is="button"]:disabled[has~="black-background"],
+[is="button"][disabled][has~="black-background"],
+[is="button"][state="loading"][has~="black-background"] {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.7); }
+
+button[has~="black-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[role=button][has~="black-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[is="button"][has~="black-background"]:not([state="disabled"]):not([state="loading"]):hover {
+  background-color: #333333; }
+
+button[has~="black-color"],
+[role=button][has~="black-color"],
+[type=button][has~="black-color"],
+[is="button"][has~="black-color"] {
+  color: #000000; }
+
+[is][has~="white-background"],
+[has~="white-background"] {
+  background-color: #ffffff; }
+
+[is][has~="white-color"],
+[has~="white-color"] {
+  color: #ffffff; }
+
+button[has~="white-background"],
+[role=button][has~="white-background"],
+[type=button][has~="white-background"],
+[is="button"][has~="white-background"] {
+  background-color: #ffffff;
+  color: #000000; }
+  button[has~="white-background"] .ripple-helper,
+  [role=button][has~="white-background"] .ripple-helper,
+  [type=button][has~="white-background"] .ripple-helper,
+  [is="button"][has~="white-background"] .ripple-helper {
+    background: #0093c3; }
+
+button:disabled[has~="white-background"],
+button[disabled][has~="white-background"],
+button[state="loading"][has~="white-background"],
+[role="button"]:disabled[has~="white-background"],
+[role="button"][disabled][has~="white-background"],
+[role="button"][state="loading"][has~="white-background"],
+[is="button"]:disabled[has~="white-background"],
+[is="button"][disabled][has~="white-background"],
+[is="button"][state="loading"][has~="white-background"] {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.7); }
+
+button[has~="white-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[role=button][has~="white-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[is="button"][has~="white-background"]:not([state="disabled"]):not([state="loading"]):hover {
+  background-color: #e6e6e6; }
+
+button[has~="white-color"],
+[role=button][has~="white-color"],
+[type=button][has~="white-color"],
+[is="button"][has~="white-color"] {
+  color: #ffffff; }
+
+[is][has~="warn-background"],
+[has~="warn-background"] {
   background-color: #c36e00; }
 
 [is][has~="warn-color"],
 [has~="warn-color"] {
   color: #c36e00; }
 
-button[has~="warn-bgcolor"],
-[role=button][has~="warn-bgcolor"],
-[is="button"][has~="warn-bgcolor"] {
-  background-color: #c36e00; }
-  button[has~="warn-bgcolor"] .ripple-helper,
-  [role=button][has~="warn-bgcolor"] .ripple-helper,
-  [is="button"][has~="warn-bgcolor"] .ripple-helper {
+button[has~="warn-background"],
+[role=button][has~="warn-background"],
+[type=button][has~="warn-background"],
+[is="button"][has~="warn-background"] {
+  background-color: #c36e00;
+  color: #ffffff; }
+  button[has~="warn-background"] .ripple-helper,
+  [role=button][has~="warn-background"] .ripple-helper,
+  [type=button][has~="warn-background"] .ripple-helper,
+  [is="button"][has~="warn-background"] .ripple-helper {
     background: #f68b00; }
 
-button[has~="warn-bgcolor"]:hover,
-[role=button][has~="warn-bgcolor"]:hover,
-[is="button"][has~="warn-bgcolor"]:hover {
+button:disabled[has~="warn-background"],
+button[disabled][has~="warn-background"],
+button[state="loading"][has~="warn-background"],
+[role="button"]:disabled[has~="warn-background"],
+[role="button"][disabled][has~="warn-background"],
+[role="button"][state="loading"][has~="warn-background"],
+[is="button"]:disabled[has~="warn-background"],
+[is="button"][disabled][has~="warn-background"],
+[is="button"][state="loading"][has~="warn-background"] {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(195, 110, 0, 0.7); }
+
+button[has~="warn-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[role=button][has~="warn-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[is="button"][has~="warn-background"]:not([state="disabled"]):not([state="loading"]):hover {
   background-color: #905100; }
 
 button[has~="warn-color"],
 [role=button][has~="warn-color"],
+[type=button][has~="warn-color"],
 [is="button"][has~="warn-color"] {
   color: #c36e00; }
 
-[is][has~="success-bgcolor"],
-[has~="success-bgcolor"] {
+[is][has~="success-background"],
+[has~="success-background"] {
   background-color: #20c300; }
 
 [is][has~="success-color"],
 [has~="success-color"] {
   color: #20c300; }
 
-button[has~="success-bgcolor"],
-[role=button][has~="success-bgcolor"],
-[is="button"][has~="success-bgcolor"] {
-  background-color: #20c300; }
-  button[has~="success-bgcolor"] .ripple-helper,
-  [role=button][has~="success-bgcolor"] .ripple-helper,
-  [is="button"][has~="success-bgcolor"] .ripple-helper {
+button[has~="success-background"],
+[role=button][has~="success-background"],
+[type=button][has~="success-background"],
+[is="button"][has~="success-background"] {
+  background-color: #20c300;
+  color: #ffffff; }
+  button[has~="success-background"] .ripple-helper,
+  [role=button][has~="success-background"] .ripple-helper,
+  [type=button][has~="success-background"] .ripple-helper,
+  [is="button"][has~="success-background"] .ripple-helper {
     background: #28f600; }
 
-button[has~="success-bgcolor"]:hover,
-[role=button][has~="success-bgcolor"]:hover,
-[is="button"][has~="success-bgcolor"]:hover {
+button:disabled[has~="success-background"],
+button[disabled][has~="success-background"],
+button[state="loading"][has~="success-background"],
+[role="button"]:disabled[has~="success-background"],
+[role="button"][disabled][has~="success-background"],
+[role="button"][state="loading"][has~="success-background"],
+[is="button"]:disabled[has~="success-background"],
+[is="button"][disabled][has~="success-background"],
+[is="button"][state="loading"][has~="success-background"] {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(32, 195, 0, 0.7); }
+
+button[has~="success-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[role=button][has~="success-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[is="button"][has~="success-background"]:not([state="disabled"]):not([state="loading"]):hover {
   background-color: #189000; }
 
 button[has~="success-color"],
 [role=button][has~="success-color"],
+[type=button][has~="success-color"],
 [is="button"][has~="success-color"] {
   color: #20c300; }
 
-[is][has~="error-bgcolor"],
-[has~="error-bgcolor"] {
+[is][has~="error-background"],
+[has~="error-background"] {
   background-color: #c30000; }
 
 [is][has~="error-color"],
 [has~="error-color"] {
   color: #c30000; }
 
-button[has~="error-bgcolor"],
-[role=button][has~="error-bgcolor"],
-[is="button"][has~="error-bgcolor"] {
-  background-color: #c30000; }
-  button[has~="error-bgcolor"] .ripple-helper,
-  [role=button][has~="error-bgcolor"] .ripple-helper,
-  [is="button"][has~="error-bgcolor"] .ripple-helper {
+button[has~="error-background"],
+[role=button][has~="error-background"],
+[type=button][has~="error-background"],
+[is="button"][has~="error-background"] {
+  background-color: #c30000;
+  color: #ffffff; }
+  button[has~="error-background"] .ripple-helper,
+  [role=button][has~="error-background"] .ripple-helper,
+  [type=button][has~="error-background"] .ripple-helper,
+  [is="button"][has~="error-background"] .ripple-helper {
     background: #f60000; }
 
-button[has~="error-bgcolor"]:hover,
-[role=button][has~="error-bgcolor"]:hover,
-[is="button"][has~="error-bgcolor"]:hover {
+button:disabled[has~="error-background"],
+button[disabled][has~="error-background"],
+button[state="loading"][has~="error-background"],
+[role="button"]:disabled[has~="error-background"],
+[role="button"][disabled][has~="error-background"],
+[role="button"][state="loading"][has~="error-background"],
+[is="button"]:disabled[has~="error-background"],
+[is="button"][disabled][has~="error-background"],
+[is="button"][state="loading"][has~="error-background"] {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(195, 0, 0, 0.7); }
+
+button[has~="error-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[role=button][has~="error-background"]:not([state="disabled"]):not([state="loading"]):hover,
+[is="button"][has~="error-background"]:not([state="disabled"]):not([state="loading"]):hover {
   background-color: #900000; }
 
 button[has~="error-color"],
 [role=button][has~="error-color"],
+[type=button][has~="error-color"],
 [is="button"][has~="error-color"] {
   color: #c30000; }
 

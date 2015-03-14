@@ -75,18 +75,43 @@
 }
 
 
+@mixin button-selector(){
+	button,
+	[role=button],
+	[type=button],
+	[is="button"]{
+		@content;
+	}
+}
+
 @mixin button-property($selector){
 	button[has~="#{$selector}"],
 	[role=button][has~="#{$selector}"],
+	[type=button][has~="#{$selector}"],
 	[is="button"][has~="#{$selector}"]{
 		@content;
 	}
 }
 
+@mixin button-property-disabled($selector){
+	button:disabled[has~="#{$selector}"],
+	button[disabled][has~="#{$selector}"],
+	button[state="loading"][has~="#{$selector}"],
+	[role="button"]:disabled[has~="#{$selector}"],
+	[role="button"][disabled][has~="#{$selector}"],
+	[role="button"][state="loading"][has~="#{$selector}"],
+	[is="button"]:disabled[has~="#{$selector}"],
+	[is="button"][disabled][has~="#{$selector}"],
+	[is="button"][state="loading"][has~="#{$selector}"]{
+		@content;
+	}
+}
+
+
 @mixin button-property-hover($selector){
-	button[has~="#{$selector}"]:hover,
-	[role=button][has~="#{$selector}"]:hover,
-	[is="button"][has~="#{$selector}"]:hover{
+	button[has~="#{$selector}"]:not([state="disabled"]):not([state="loading"]):hover,
+	[role=button][has~="#{$selector}"]:not([state="disabled"]):not([state="loading"]):hover,
+	[is="button"][has~="#{$selector}"]:not([state="disabled"]):not([state="loading"]):hover{
 		@content;
 	}
 }

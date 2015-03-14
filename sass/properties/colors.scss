@@ -2,8 +2,8 @@
 
 @each $color, $key in $colors {
 
-	[is][has~="#{$color}-bgcolor"],
-	[has~="#{$color}-bgcolor"]{
+	[is][has~="#{$color}-background"],
+	[has~="#{$color}-background"]{
 		background-color: color-from-map($color, colors, standard);
 	}
 
@@ -12,15 +12,25 @@
 		color: color-from-map($color, colors, standard);
 	}
 
-	@include button-property("#{$color}-bgcolor"){
+	@include button-property("#{$color}-background"){
 		background-color: color-from-map($color, buttons, background);
+		color: color-from-map($color, buttons, font);
 
 		.ripple-helper{
-			background:  button-color($color, active);
+			@if button-color($color, ripple){
+				background:  button-color($color, ripple);
+			} @else {
+				background:  button-color($color, active);
+			}
 		}
 	}
 
-	@include button-property-hover("#{$color}-bgcolor"){
+	@include button-property-disabled("#{$color}-background"){
+		color: rgba(button-color($color, font), 0.3);
+		background-color:  rgba(button-color($color, background), 0.7);
+	}
+
+	@include button-property-hover("#{$color}-background"){
 		background-color: color-from-map($color, buttons, hover);
 	}
 

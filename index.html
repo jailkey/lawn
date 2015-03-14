@@ -161,17 +161,17 @@
 
 <h2>full-width-buttons button bar</h2>
 <div is="button-bar" has="full-width-buttons">
-	<a is="button" has="icon-rocket error-bgcolor">rocket</a>
-	<a is="button" has="icon-tape warn-bgcolor">tape</a>
-	<a is="button" has="icon-water success-bgcolor">water</a>
+	<a is="button" has="icon-rocket error-background">rocket</a>
+	<a is="button" has="icon-tape warn-background">tape</a>
+	<a is="button" has="icon-water success-background">water</a>
 </div>
 
 <h2>two nested button bars </h2>
 <div is="button-bar">
 	<div is="button-bar">
-		<a is="button" has="icon-rocket">rocket</a>
+		<a is="button" has="icon-rocket white-background">rocket</a>
 		<a is="button" has="icon-tape">tape</a>
-		<a is="button" has="icon-water">water</a>
+		<a is="button" has="icon-water black-background">water</a>
 	</div>
 	<div is="button-bar">
 		<a is="button" has="icon-rocket">mitte</a>
@@ -185,10 +185,17 @@
 	</div>
 </div>
 
+<h2>button bar with seperator</h2>
+<div is="button-bar" has="seperator">
+	<a is="button" has="icon-rocket quaternary-background">rocket</a>
+	<a is="button" has="icon-tape tertiary-background">tape</a>
+	<a is="button" has="icon-water">water</a>
+</div>
+
 <h2>option bar</h2>
 <div is="option-bar">
-	<a is="button" has="icon-rocket">rocket</a>
-	<a is="button" has="icon-tape">tape</a>
+	<a is="button" has="icon-rocket secondary-background" >rocket</a>
+	<a is="button" has="icon-tape tertiary-background">tape</a>
 	<a is="button" has="icon-water">water</a>
 </div>
 </html>		

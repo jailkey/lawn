@@ -4,10 +4,21 @@
 $standard-font-color: #222222;
 $invert-font-color: #ffffff;
 
-$primary-color : get-shade-map(#0093c3);
-$warn-color: get-shade-map(#c36e00);
-$success-color: get-shade-map(#20c300);
-$error-color:  get-shade-map(#c30000);
+$primary-color: #0093c3;
+$secondary-color: #a601bf;
+$tertiary-color: #00c39c;
+$quaternary-color: #f6bf00;
+
+
+$primary-colors : get-shade-map($primary-color);
+$secondary-colors: get-shade-map($secondary-color);
+$tertiary-colors: get-shade-map($tertiary-color);
+$quaternary-colors : get-shade-map($quaternary-color);
+$black-colors: get-shade-map(#000000);
+$white-colors: get-shade-map(#ffffff);
+$warn-colors: get-shade-map(#c36e00);
+$success-colors: get-shade-map(#20c300);
+$error-colors:  get-shade-map(#c30000);
 
 
 
@@ -63,6 +74,8 @@ $grid-space-evently: 5px;
 $button-shadows : off;
 $button-rounded-corners: 0px;
 
+$button-seperator-width: 2px;
+
 $standard-button-padding-top-bottom: 10px;
 $standard-button-padding-left-right: 20px;
 
@@ -84,11 +97,51 @@ $primary-button-color : (
 	active : lighten(#0093c3, 10),
 );
 
+$secondary-button-color : (
+	font : #ffffff,
+	background : $secondary-color,
+	hover : darken($secondary-color, 10),
+	active : lighten($secondary-color, 10),
+);
+
+$tertiary-button-color : (
+	font : #ffffff,
+	background : $tertiary-color,
+	hover : darken($tertiary-color, 10),
+	active : lighten($tertiary-color, 10),
+);
+
+$quaternary-button-color : (
+	font : #ffffff,
+	background : $quaternary-color,
+	hover : darken($quaternary-color, 10),
+	active : lighten($quaternary-color, 10),
+);
+
+
+$black-button-color : (
+	font : #ffffff,
+	background : #000000,
+	hover : lighten(#000000, 20),
+	active : lighten(#000000, 30),
+	ripple : #666666
+);
+
+$white-button-color : (
+	font : #000000,
+	background : #ffffff,
+	hover : darken(#ffffff, 10),
+	active : lighten(#ffffff, 10),
+	ripple : $primary-color
+);
+
+
+
 $warn-button-color : (
 	font : #ffffff,
 	background : #c36e00,
-	hover :  darken(#c36e00, 10),
-	active :  lighten(#c36e00, 10)
+	hover : darken(#c36e00, 10),
+	active : lighten(#c36e00, 10)
 );
 
 $success-button-color : (
@@ -101,8 +154,8 @@ $success-button-color : (
 $error-button-color : (
 	font : #ffffff,
 	background : #c30000,
-	hover :  darken(#c30000, 10),
-	active :  lighten(#c30000, 10)
+	hover : darken(#c30000, 10),
+	active : lighten(#c30000, 10)
 );
 
 
