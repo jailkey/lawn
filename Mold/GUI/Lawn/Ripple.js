@@ -35,7 +35,7 @@ Seed({
 				helper.css({
 					left : (e.pageX - element.position().left - 10) ,
 					top : (e.pageY - element.position().top - 10) 
-				})
+				});
 
 				if(properties){
 					properties = properties.split(" ");
@@ -51,7 +51,7 @@ Seed({
 							top :  element.sizes().height / 2 - 10 
 						})
 					}
-				}
+				};
 				
 				helper.addClass("ripple-helper");
 				
@@ -79,7 +79,7 @@ Seed({
 					}
 				], growTime , "ease-out")
 				.then(function(){
-					//helper.remove();	
+					helper.remove();	
 				});
 			}
 			

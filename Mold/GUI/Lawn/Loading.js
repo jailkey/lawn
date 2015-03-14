@@ -30,10 +30,14 @@ Seed({
 			}
 			if(element.getAttribute('state') === "loading"){
 				_loader = new Element("x-loader");
+				_loader.setAttribute("state", "default");
 				element.append(_loader);
 			}
 		}
 
+		collection.on("state.changed", function(){
+			console.log("state changed")
+		})
 	
 		Mold.watch(collection, 'state', test);
 
