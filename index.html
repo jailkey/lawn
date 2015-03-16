@@ -55,7 +55,7 @@
 	This is <q>quoted Text</q>.
 <br>
 	This is a keyboard <kbd>command</kbd>
-	</body>
+
 
 <br>
 <br>
@@ -201,10 +201,52 @@
 
 <h2>option bar with unique values</h2>
 <div is="option-bar" has="unique-values">
-	<a is="button" has="icon-rocket secondary-background" >rocket</a>
-	<a is="button" has="icon-tape secondary-background">tape</a>
-	<a is="button" has="icon-water secondary-background">water</a>
+	<a is="button" has="secondary-background" state="selected">rocket</a>
+	<a is="button" has="secondary-background">tape</a>
+	<a is="button" has="secondary-background">water</a>
+	<a is="button" has="secondary-background">salt</a>
 </div>
+
+<h2>forms</h2>
+<form>
+	<div is="row">
+		<div is="column">
+			FORMS:
+		</div>
+		<div is="column">
+			
+				<label>Name:</label>
+				<input type="text" name="test" placeholder="name" required>
+			
+				<label>E-mail:</label>
+				<input type="email" name="test" placeholder="name" required>
+				
+			</div>
+		</div>
+	</div>
+</form>
+
+<form has="abreast-labels">
+	<div is="row">
+		<div is="column">
+			FORMS:
+		</div>
+		<div is="column">
+			<div is="row">
+				<div is="column">
+					<label>Name:</label>
+					<input type="text" name="test" placeholder="name">
+				</div>
+				<div is="column">
+					<label>E-mail:</label>
+					<input type="email" name="test" placeholder="name">
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+</body>
 </html>		
 
 

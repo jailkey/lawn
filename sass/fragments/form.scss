@@ -1,0 +1,70 @@
+@import "../config";
+
+input, textarea{
+	background: transparent;
+	border: none;
+	border-bottom: $input-border-width $input-border-color solid;
+	padding: pxToRem($input-padding-left-right) pxToRem($input-padding-top-bottom);
+	font-size: pxToRem($input-font-size);
+	line-height: pxToRem($input-line-height);
+	margin: 0;
+	margin-bottom: $input-margin;
+	box-sizing: border-box;
+	display:block;
+	box-shadow: inset 300px 0 0 0 #fff, inset -300px 0 0 0 #fff, inset 0 -2px 0  button-color(primary, background);
+	transition: box-shadow 0.5s ease-in, border-color 0.5s ease-out;
+	width: 100%;
+}
+
+
+
+
+
+ input:empty:focus, textarea:empty:focus{
+	box-shadow: inset 0 0 0 0 #fff,  inset  0 0 0 0 #fff, inset 0 -2px 0  button-color(primary, background);
+	border-color: button-color(primary, background);
+	outline: none;
+}
+
+input:valid{
+ 	box-shadow: inset 300px 0 0 0 #fff, inset -300px 0 0 0 #fff, inset 0 -2px 0  button-color(primary, background);
+	border-bottom: $input-border-width $input-border-color solid;
+}
+
+
+input:invalid{
+ 	box-shadow: inset 0 0 0 0 #fff,  inset  0 0 0 0 #fff, inset 0 -2px 0  $error-color;
+ 	border-color: $error-color;
+ }
+
+
+
+
+label{
+	font-size: pxToRem($label-font-size);
+	line-height: pxToRem($standard-line-height);
+	margin: 0;
+	margin-bottom: $label-margin;
+	color: $label-color;
+	box-sizing: border-box;
+	display: block;
+}
+
+[has~="abreast-labels"] {
+	label, input, textarea{
+		display: inline-block;
+	}
+
+	label {
+		width: 30%;
+		margin-top: 0;
+		font-size: pxToRem($label-big-font-size);
+	}
+
+	input, textarea{
+		width: 70%;
+		max-width:70%;
+		margin-left: -4px;
+	}
+
+}

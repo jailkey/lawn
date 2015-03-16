@@ -8,6 +8,9 @@ $primary-color: #0093c3;
 $secondary-color: #a601bf;
 $tertiary-color: #00c39c;
 $quaternary-color: #f6bf00;
+$error-color: #c30000;
+$warn-color: #c36e00;
+$success-color: #20c300;
 
 
 $primary-colors : get-shade-map($primary-color);
@@ -16,9 +19,9 @@ $tertiary-colors: get-shade-map($tertiary-color);
 $quaternary-colors : get-shade-map($quaternary-color);
 $black-colors: get-shade-map(#000000);
 $white-colors: get-shade-map(#ffffff);
-$warn-colors: get-shade-map(#c36e00);
+$warn-colors: get-shade-map($warn-color);
 $success-colors: get-shade-map(#20c300);
-$error-colors:  get-shade-map(#c30000);
+$error-colors:  get-shade-map($error-color);
 
 
 
@@ -167,11 +170,25 @@ $error-button-color : (
 	selected : darken(#c30000, 20),
 );
 
+//Forms
+$input-border-color: #999999;
+$input-form-background: #ffffff;
+$input-border-width: 2px;
+$input-padding-left-right: 3px;
+$input-padding-top-bottom: 10px;
+$input-margin: 20px;
+$input-font-size: $standard-font-size;
+$input-line-height: $standard-line-height;
+
+$label-font-size: $small-font-size;
+$label-margin: 0px;
+$label-color: #222222;
+
+$label-big-font-size: $standard-font-size;
 
 
 
-$secondary-color : "";
-
+//Text and Link color
 $mark-color : #ff0000;
 $link-color : #000000;
 $link-color-hover : #666666;

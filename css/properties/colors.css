@@ -8,19 +8,25 @@
 
 button[has~="primary-background"],
 [role=button][has~="primary-background"],
-[type=button][has~="primary-background"],
+[type="button"][has~="primary-background"],
+[type="submit"][has~="primary-background"],
+[type="reset"][has~="primary-background"],
 [is="button"][has~="primary-background"] {
   background-color: #0093c3;
   color: #ffffff; }
   button[has~="primary-background"] .ripple-helper,
   [role=button][has~="primary-background"] .ripple-helper,
-  [type=button][has~="primary-background"] .ripple-helper,
+  [type="button"][has~="primary-background"] .ripple-helper,
+  [type="submit"][has~="primary-background"] .ripple-helper,
+  [type="reset"][has~="primary-background"] .ripple-helper,
   [is="button"][has~="primary-background"] .ripple-helper {
     background: #00b9f6; }
 
 button[state="selected"][has~="primary-background"],
 [role=button][state="selected"][has~="primary-background"],
-[type=button][state="selected"][has~="primary-background"],
+[type="button"][state="selected"][has~="primary-background"],
+[type="submit"][state="selected"][has~="primary-background"],
+[type="reset"][state="selected"][has~="primary-background"],
 [is="button"][state="selected"][has~="primary-background"] {
   background-color: #00465d;
   box-shadow: inset 0 -4px 0px #0093c3;
@@ -45,7 +51,9 @@ button[has~="primary-background"]:not([state="disabled"]):not([state="loading"])
 
 button[has~="primary-color"],
 [role=button][has~="primary-color"],
-[type=button][has~="primary-color"],
+[type="button"][has~="primary-color"],
+[type="submit"][has~="primary-color"],
+[type="reset"][has~="primary-color"],
 [is="button"][has~="primary-color"] {
   color: #0093c3; }
 
@@ -59,19 +67,25 @@ button[has~="primary-color"],
 
 button[has~="secondary-background"],
 [role=button][has~="secondary-background"],
-[type=button][has~="secondary-background"],
+[type="button"][has~="secondary-background"],
+[type="submit"][has~="secondary-background"],
+[type="reset"][has~="secondary-background"],
 [is="button"][has~="secondary-background"] {
   background-color: #a601bf;
   color: #ffffff; }
   button[has~="secondary-background"] .ripple-helper,
   [role=button][has~="secondary-background"] .ripple-helper,
-  [type=button][has~="secondary-background"] .ripple-helper,
+  [type="button"][has~="secondary-background"] .ripple-helper,
+  [type="submit"][has~="secondary-background"] .ripple-helper,
+  [type="reset"][has~="secondary-background"] .ripple-helper,
   [is="button"][has~="secondary-background"] .ripple-helper {
     background: #d201f2; }
 
 button[state="selected"][has~="secondary-background"],
 [role=button][state="selected"][has~="secondary-background"],
-[type=button][state="selected"][has~="secondary-background"],
+[type="button"][state="selected"][has~="secondary-background"],
+[type="submit"][state="selected"][has~="secondary-background"],
+[type="reset"][state="selected"][has~="secondary-background"],
 [is="button"][state="selected"][has~="secondary-background"] {
   background-color: #4e005a;
   box-shadow: inset 0 -4px 0px #a601bf;
@@ -96,7 +110,9 @@ button[has~="secondary-background"]:not([state="disabled"]):not([state="loading"
 
 button[has~="secondary-color"],
 [role=button][has~="secondary-color"],
-[type=button][has~="secondary-color"],
+[type="button"][has~="secondary-color"],
+[type="submit"][has~="secondary-color"],
+[type="reset"][has~="secondary-color"],
 [is="button"][has~="secondary-color"] {
   color: #a601bf; }
 
@@ -110,19 +126,25 @@ button[has~="secondary-color"],
 
 button[has~="tertiary-background"],
 [role=button][has~="tertiary-background"],
-[type=button][has~="tertiary-background"],
+[type="button"][has~="tertiary-background"],
+[type="submit"][has~="tertiary-background"],
+[type="reset"][has~="tertiary-background"],
 [is="button"][has~="tertiary-background"] {
   background-color: #00c39c;
   color: #ffffff; }
   button[has~="tertiary-background"] .ripple-helper,
   [role=button][has~="tertiary-background"] .ripple-helper,
-  [type=button][has~="tertiary-background"] .ripple-helper,
+  [type="button"][has~="tertiary-background"] .ripple-helper,
+  [type="submit"][has~="tertiary-background"] .ripple-helper,
+  [type="reset"][has~="tertiary-background"] .ripple-helper,
   [is="button"][has~="tertiary-background"] .ripple-helper {
     background: #00f6c5; }
 
 button[state="selected"][has~="tertiary-background"],
 [role=button][state="selected"][has~="tertiary-background"],
-[type=button][state="selected"][has~="tertiary-background"],
+[type="button"][state="selected"][has~="tertiary-background"],
+[type="submit"][state="selected"][has~="tertiary-background"],
+[type="reset"][state="selected"][has~="tertiary-background"],
 [is="button"][state="selected"][has~="tertiary-background"] {
   background-color: #005d4a;
   box-shadow: inset 0 -4px 0px #00c39c;
@@ -147,7 +169,9 @@ button[has~="tertiary-background"]:not([state="disabled"]):not([state="loading"]
 
 button[has~="tertiary-color"],
 [role=button][has~="tertiary-color"],
-[type=button][has~="tertiary-color"],
+[type="button"][has~="tertiary-color"],
+[type="submit"][has~="tertiary-color"],
+[type="reset"][has~="tertiary-color"],
 [is="button"][has~="tertiary-color"] {
   color: #00c39c; }
 
@@ -161,19 +185,25 @@ button[has~="tertiary-color"],
 
 button[has~="quaternary-background"],
 [role=button][has~="quaternary-background"],
-[type=button][has~="quaternary-background"],
+[type="button"][has~="quaternary-background"],
+[type="submit"][has~="quaternary-background"],
+[type="reset"][has~="quaternary-background"],
 [is="button"][has~="quaternary-background"] {
   background-color: #f6bf00;
   color: #ffffff; }
   button[has~="quaternary-background"] .ripple-helper,
   [role=button][has~="quaternary-background"] .ripple-helper,
-  [type=button][has~="quaternary-background"] .ripple-helper,
+  [type="button"][has~="quaternary-background"] .ripple-helper,
+  [type="submit"][has~="quaternary-background"] .ripple-helper,
+  [type="reset"][has~="quaternary-background"] .ripple-helper,
   [is="button"][has~="quaternary-background"] .ripple-helper {
     background: #ffcf2a; }
 
 button[state="selected"][has~="quaternary-background"],
 [role=button][state="selected"][has~="quaternary-background"],
-[type=button][state="selected"][has~="quaternary-background"],
+[type="button"][state="selected"][has~="quaternary-background"],
+[type="submit"][state="selected"][has~="quaternary-background"],
+[type="reset"][state="selected"][has~="quaternary-background"],
 [is="button"][state="selected"][has~="quaternary-background"] {
   background-color: #907000;
   box-shadow: inset 0 -4px 0px #f6bf00;
@@ -198,7 +228,9 @@ button[has~="quaternary-background"]:not([state="disabled"]):not([state="loading
 
 button[has~="quaternary-color"],
 [role=button][has~="quaternary-color"],
-[type=button][has~="quaternary-color"],
+[type="button"][has~="quaternary-color"],
+[type="submit"][has~="quaternary-color"],
+[type="reset"][has~="quaternary-color"],
 [is="button"][has~="quaternary-color"] {
   color: #f6bf00; }
 
@@ -212,19 +244,25 @@ button[has~="quaternary-color"],
 
 button[has~="black-background"],
 [role=button][has~="black-background"],
-[type=button][has~="black-background"],
+[type="button"][has~="black-background"],
+[type="submit"][has~="black-background"],
+[type="reset"][has~="black-background"],
 [is="button"][has~="black-background"] {
   background-color: #000000;
   color: #ffffff; }
   button[has~="black-background"] .ripple-helper,
   [role=button][has~="black-background"] .ripple-helper,
-  [type=button][has~="black-background"] .ripple-helper,
+  [type="button"][has~="black-background"] .ripple-helper,
+  [type="submit"][has~="black-background"] .ripple-helper,
+  [type="reset"][has~="black-background"] .ripple-helper,
   [is="button"][has~="black-background"] .ripple-helper {
     background: #666666; }
 
 button[state="selected"][has~="black-background"],
 [role=button][state="selected"][has~="black-background"],
-[type=button][state="selected"][has~="black-background"],
+[type="button"][state="selected"][has~="black-background"],
+[type="submit"][state="selected"][has~="black-background"],
+[type="reset"][state="selected"][has~="black-background"],
 [is="button"][state="selected"][has~="black-background"] {
   background-color: #1a1a1a;
   box-shadow: inset 0 -4px 0px #000000;
@@ -249,7 +287,9 @@ button[has~="black-background"]:not([state="disabled"]):not([state="loading"]):n
 
 button[has~="black-color"],
 [role=button][has~="black-color"],
-[type=button][has~="black-color"],
+[type="button"][has~="black-color"],
+[type="submit"][has~="black-color"],
+[type="reset"][has~="black-color"],
 [is="button"][has~="black-color"] {
   color: #000000; }
 
@@ -263,19 +303,25 @@ button[has~="black-color"],
 
 button[has~="white-background"],
 [role=button][has~="white-background"],
-[type=button][has~="white-background"],
+[type="button"][has~="white-background"],
+[type="submit"][has~="white-background"],
+[type="reset"][has~="white-background"],
 [is="button"][has~="white-background"] {
   background-color: #ffffff;
   color: #000000; }
   button[has~="white-background"] .ripple-helper,
   [role=button][has~="white-background"] .ripple-helper,
-  [type=button][has~="white-background"] .ripple-helper,
+  [type="button"][has~="white-background"] .ripple-helper,
+  [type="submit"][has~="white-background"] .ripple-helper,
+  [type="reset"][has~="white-background"] .ripple-helper,
   [is="button"][has~="white-background"] .ripple-helper {
     background: #0093c3; }
 
 button[state="selected"][has~="white-background"],
 [role=button][state="selected"][has~="white-background"],
-[type=button][state="selected"][has~="white-background"],
+[type="button"][state="selected"][has~="white-background"],
+[type="submit"][state="selected"][has~="white-background"],
+[type="reset"][state="selected"][has~="white-background"],
 [is="button"][state="selected"][has~="white-background"] {
   background-color: #cccccc;
   box-shadow: inset 0 -4px 0px #ffffff;
@@ -300,7 +346,9 @@ button[has~="white-background"]:not([state="disabled"]):not([state="loading"]):n
 
 button[has~="white-color"],
 [role=button][has~="white-color"],
-[type=button][has~="white-color"],
+[type="button"][has~="white-color"],
+[type="submit"][has~="white-color"],
+[type="reset"][has~="white-color"],
 [is="button"][has~="white-color"] {
   color: #ffffff; }
 
@@ -314,19 +362,25 @@ button[has~="white-color"],
 
 button[has~="warn-background"],
 [role=button][has~="warn-background"],
-[type=button][has~="warn-background"],
+[type="button"][has~="warn-background"],
+[type="submit"][has~="warn-background"],
+[type="reset"][has~="warn-background"],
 [is="button"][has~="warn-background"] {
   background-color: #c36e00;
   color: #ffffff; }
   button[has~="warn-background"] .ripple-helper,
   [role=button][has~="warn-background"] .ripple-helper,
-  [type=button][has~="warn-background"] .ripple-helper,
+  [type="button"][has~="warn-background"] .ripple-helper,
+  [type="submit"][has~="warn-background"] .ripple-helper,
+  [type="reset"][has~="warn-background"] .ripple-helper,
   [is="button"][has~="warn-background"] .ripple-helper {
     background: #f68b00; }
 
 button[state="selected"][has~="warn-background"],
 [role=button][state="selected"][has~="warn-background"],
-[type=button][state="selected"][has~="warn-background"],
+[type="button"][state="selected"][has~="warn-background"],
+[type="submit"][state="selected"][has~="warn-background"],
+[type="reset"][state="selected"][has~="warn-background"],
 [is="button"][state="selected"][has~="warn-background"] {
   box-shadow: inset 0 -4px 0px #c36e00;
   color: rgba(255, 255, 255, 0.9); }
@@ -350,7 +404,9 @@ button[has~="warn-background"]:not([state="disabled"]):not([state="loading"]):no
 
 button[has~="warn-color"],
 [role=button][has~="warn-color"],
-[type=button][has~="warn-color"],
+[type="button"][has~="warn-color"],
+[type="submit"][has~="warn-color"],
+[type="reset"][has~="warn-color"],
 [is="button"][has~="warn-color"] {
   color: #c36e00; }
 
@@ -364,19 +420,25 @@ button[has~="warn-color"],
 
 button[has~="success-background"],
 [role=button][has~="success-background"],
-[type=button][has~="success-background"],
+[type="button"][has~="success-background"],
+[type="submit"][has~="success-background"],
+[type="reset"][has~="success-background"],
 [is="button"][has~="success-background"] {
   background-color: #20c300;
   color: #ffffff; }
   button[has~="success-background"] .ripple-helper,
   [role=button][has~="success-background"] .ripple-helper,
-  [type=button][has~="success-background"] .ripple-helper,
+  [type="button"][has~="success-background"] .ripple-helper,
+  [type="submit"][has~="success-background"] .ripple-helper,
+  [type="reset"][has~="success-background"] .ripple-helper,
   [is="button"][has~="success-background"] .ripple-helper {
     background: #28f600; }
 
 button[state="selected"][has~="success-background"],
 [role=button][state="selected"][has~="success-background"],
-[type=button][state="selected"][has~="success-background"],
+[type="button"][state="selected"][has~="success-background"],
+[type="submit"][state="selected"][has~="success-background"],
+[type="reset"][state="selected"][has~="success-background"],
 [is="button"][state="selected"][has~="success-background"] {
   box-shadow: inset 0 -4px 0px #20c300;
   color: rgba(255, 255, 255, 0.9); }
@@ -400,7 +462,9 @@ button[has~="success-background"]:not([state="disabled"]):not([state="loading"])
 
 button[has~="success-color"],
 [role=button][has~="success-color"],
-[type=button][has~="success-color"],
+[type="button"][has~="success-color"],
+[type="submit"][has~="success-color"],
+[type="reset"][has~="success-color"],
 [is="button"][has~="success-color"] {
   color: #20c300; }
 
@@ -414,19 +478,25 @@ button[has~="success-color"],
 
 button[has~="error-background"],
 [role=button][has~="error-background"],
-[type=button][has~="error-background"],
+[type="button"][has~="error-background"],
+[type="submit"][has~="error-background"],
+[type="reset"][has~="error-background"],
 [is="button"][has~="error-background"] {
   background-color: #c30000;
   color: #ffffff; }
   button[has~="error-background"] .ripple-helper,
   [role=button][has~="error-background"] .ripple-helper,
-  [type=button][has~="error-background"] .ripple-helper,
+  [type="button"][has~="error-background"] .ripple-helper,
+  [type="submit"][has~="error-background"] .ripple-helper,
+  [type="reset"][has~="error-background"] .ripple-helper,
   [is="button"][has~="error-background"] .ripple-helper {
     background: #f60000; }
 
 button[state="selected"][has~="error-background"],
 [role=button][state="selected"][has~="error-background"],
-[type=button][state="selected"][has~="error-background"],
+[type="button"][state="selected"][has~="error-background"],
+[type="submit"][state="selected"][has~="error-background"],
+[type="reset"][state="selected"][has~="error-background"],
 [is="button"][state="selected"][has~="error-background"] {
   box-shadow: inset 0 -4px 0px #c30000;
   color: rgba(255, 255, 255, 0.9); }
@@ -450,7 +520,9 @@ button[has~="error-background"]:not([state="disabled"]):not([state="loading"]):n
 
 button[has~="error-color"],
 [role=button][has~="error-color"],
-[type=button][has~="error-color"],
+[type="button"][has~="error-color"],
+[type="submit"][has~="error-color"],
+[type="reset"][has~="error-color"],
 [is="button"][has~="error-color"] {
   color: #c30000; }
 
