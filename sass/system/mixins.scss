@@ -78,18 +78,19 @@
 @mixin button-selector(){
 	button,
 	[role=button],
-	[type=button],
+	[type="button"],
+	[type="submit"],
+	[type="reset"],
 	[is="button"]{
 		@content;
 	}
 }
 
 @mixin button-property($selector){
-	button[has~="#{$selector}"],
-	[role=button][has~="#{$selector}"],
-	[type=button][has~="#{$selector}"],
-	[is="button"][has~="#{$selector}"]{
-		@content;
+	@include button-selector(){
+		&[has~="#{$selector}"]{
+			@content;
+		}
 	}
 }
 

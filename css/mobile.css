@@ -5,6 +5,7 @@
 @import url(fragments/text.css);
 @import url(fragments/grid.css);
 @import url(fragments/buttons.css);
+@import url(fragments/form.css);
 @import url(behavior/touch.css);
 @import url(properties/shadows.css);
 @import url(properties/colors.css);

@@ -1,8 +1,6 @@
 @import "../config";
 
-button,
-[role=button],
-[is="button"]{
+@include button-selector(){
 	background-color:  button-color(primary, background);
 	padding: pxToRem($standard-button-padding-top-bottom) pxToRem($standard-button-padding-left-right);
 	color:  button-color(primary, font);
@@ -51,85 +49,72 @@ button,
 }
 
 
-button:disabled,
-button[disabled],
-button[state="loading"],
-[role="button"]:disabled,
-[role="button"][disabled],
-[role="button"][state="loading"],
-[is="button"]:disabled,
-[is="button"][disabled],
-[is="button"][state="loading"]{
-	color: rgba(button-color(primary, font), 0.3);
-	background-color:  rgba(button-color(primary, background), 0.7);
+@include button-selector(){
+	&:disabled,
+	&[disabled],
+	&[state="loading"]{
+		color: rgba(button-color(primary, font), 0.3);
+		background-color:  rgba(button-color(primary, background), 0.7);
+	}
 }
 
 
 
-button[has~="big-size"], 
-[role="button"][has~="big-size"], 
-[is="button"][has~="big-size"]{
+@include button-property("big-size"){
 	line-height: pxToRem($big-line-height);
 	max-height: pxToRem($big-line-height);
 	padding: pxToRem($big-button-padding-top-bottom) pxToRem($big-button-padding-left-right);
 }
 
-button[has~="medium-size"], 
-[role="button"][has~="medium-size"], 
-[is="button"][has~="medium-size"]{
+@include button-property("medium-size"){
 	line-height: pxToRem($medium-line-height);
 	max-height: pxToRem($medium-line-height);
 	padding: pxToRem($medium-button-padding-top-bottom) pxToRem($medium-button-padding-left-right);
 }
 
-button[has~="small-size"], 
-[role="button"][has~="small-size"], 
-[is="button"][has~="small-size"]{
+@include button-property("small-size"){
 	line-height: pxToRem($small-line-height);
 	max-height: pxToRem($small-line-height);
 	padding: pxToRem($small-button-padding-top-bottom) pxToRem($small-button-padding-left-right);
 }
 
 
-button[has~="round-shapes"],
-[role="button"][has~="round-shapes"],
-[is="button"][has~="round-shapes"]{
+@include button-property("round-shapes"){
 	border-radius:100%;
 	height: pxToRem($standard-icon-size);
 	width: pxToRem($standard-icon-size);
 	padding: pxToRem($standard-button-padding-top-bottom);
 }
 
-button[has~="round-shapes"][has~="big-size"], 
-[role="button"][has~="round-shapes"][has~="big-size"], 
-[is="button"][has~="round-shapes"][has~="big-size"]{
-	height: pxToRem($big-icon-size);
-	width: pxToRem($big-icon-size);
-	padding: pxToRem($big-button-padding-top-bottom);
+@include button-property("round-shapes"){
+	&[has~="big-size"]{
+		height: pxToRem($big-icon-size);
+		width: pxToRem($big-icon-size);
+		padding: pxToRem($big-button-padding-top-bottom);
+	}
 }
 
-button[has~="round-shapes"][has~="medium-size"], 
-[role="button"][has~="round-shapes"][has~="medium-size"], 
-[is="button"][has~="round-shapes"][has~="medium-size"]{
-	height: pxToRem($medium-icon-size);
-	width: pxToRem($medium-icon-size);
-	padding: pxToRem($medium-button-padding-top-bottom);
+@include button-property("round-shapes"){
+	&[has~="medium-size"]{
+		height: pxToRem($medium-icon-size);
+		width: pxToRem($medium-icon-size);
+		padding: pxToRem($medium-button-padding-top-bottom);
+	}
+}
+
+@include button-property("round-shapes"){
+	&[has~="small-size"]{
+		height: pxToRem($small-icon-size);
+		width: pxToRem($small-icon-size);
+		padding: pxToRem($small-button-padding-top-bottom);
+	}
 }
 
 
-button[has~="round-shapes"][has~="small-size"], 
-[role="button"][has~="round-shapes"][has~="small-size"], 
-[is="button"][has~="round-shapes"][has~="small-size"]{
-	height: pxToRem($small-icon-size);
-	width: pxToRem($small-icon-size);
-	padding: pxToRem($small-button-padding-top-bottom);
-}
-
-
-button:before,
-[role=button]:before,
-[is="button"]:before{
-	margin-right: 0.5em;
+@include button-selector(){
+	&:before{
+		margin-right: 0.5em;
+	}
 }
 
 
