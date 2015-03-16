@@ -10,18 +10,22 @@
 	width: 100%;
 }
 
-[is="column"] {
+[is="column"]{
 	font-size: $standard-font-size;
 	display: -ms-inline-flexbox;
-	display: inline-flex;
+	display: inline-block;
 	box-sizing: border-box;
 	overflow: hidden;
-	@include flex-direction(column);
+	
 	@include flex-grow(1);
 	@if $grind-default-spacing == between {
 		padding-right: pxToRem($grid-space-between / 3);
 		padding-left: pxToRem($grid-space-between / 3);
 	}
+}
+
+[is="column"] {
+	
 }
 
 [is="row"][has="no-grow"] [is="column"]{
