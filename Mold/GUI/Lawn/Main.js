@@ -5,7 +5,8 @@ Seed({
 			".Ripple",
 			".Loading",
 			".Components.Loader",
-			".Components.OptionBar"
+			".Components.OptionBar",
+			".Components.FormInput"
 		]
 	},
 	function(){

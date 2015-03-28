@@ -40,7 +40,7 @@ $big-font-size: 35px;
 $semibig-font-size: 25px;
 $medium-font-size: 18px;
 $small-font-size: 12px;
-$very-small-font-size : 8px;
+$very-small-font-size : 10px;
 
 //Iconssize
 $standard-icon-size: 20px;
@@ -176,12 +176,13 @@ $input-form-background: #ffffff;
 $input-border-width: 2px;
 $input-padding-left-right: 3px;
 $input-padding-top-bottom: 10px;
-$input-margin: 20px;
+$input-margin: 10px;
 $input-font-size: $standard-font-size;
 $input-line-height: $standard-line-height;
+$input-placeholder-color: #bbbbbb;
 
-$label-font-size: $small-font-size;
-$label-margin: 0px;
+$label-font-size: $very-small-font-size;
+$label-margin: 5px;
 $label-color: #222222;
 
 $label-big-font-size: $standard-font-size;
