@@ -18,10 +18,19 @@ input:empty:focus, textarea:empty:focus {
   outline: none; }
 
 input:valid {
+  box-shadow: none;
   border-bottom: 2px #999999 solid; }
 
 input:invalid {
+  box-shadow: none;
   border-color: #c30000; }
+
+input:disabled,
+textarea:disabled,
+input[disabled],
+textarea[disabled] {
+  opacity: 0.8;
+  border-bottom-style: dotted; }
 
 ::-webkit-input-placeholder {
   color: #bbbbbb;

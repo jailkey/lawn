@@ -24,12 +24,22 @@ input:empty:focus, textarea:empty:focus{
 }
 
 input:valid{
+	box-shadow: none;
 	border-bottom: $input-border-width $input-border-color solid;
 }
 
 
 input:invalid{
+	box-shadow: none;
  	border-color: $error-color;
+}
+
+input:disabled, 
+textarea:disabled,
+input[disabled],
+textarea[disabled] {
+	opacity : 0.8;
+	border-bottom-style: dotted;
 }
 
 

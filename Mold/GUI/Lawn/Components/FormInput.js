@@ -20,26 +20,59 @@ Seed({
 	function(node, element, collection){
 
 		var hasAbreastParent = element.parent('[has~="abreast-labels"]');
-
-		var newStyle = new Mold.Lib.CSS(function(){/*|
-
-			{{selector}} {
-				box-shadow: inset {{width}}px 0 0 0 #fff, inset -{{width}}px 0 0 0 #fff, inset 0 -2px 0 {{color}};
-				transition: box-shadow 0.3s ease-in, border-color 0.3s ease-out;
-			}
-
-			{{selector}}:empty:focus {
-				box-shadow: inset 0 0 0 0 #fff,  inset  0 0 0 0 #fff, inset 0 -2px 0  {{color}};
-			}	
-
-			|*/}
-		);
 		
-		newStyle.append({
-			width : (element.sizes().width / 2),
-			color : Colors.primaryBackground,
-			selector : element.getSelector()
+		var highlighter = new Mold.Lib.Element("div");
+
+
+		
+		element.after(highlighter);
+
+		var initHeightlighter = function(){
+			console.log("init highlighter");
+
+			var position = element.position(),
+				sizes = element.sizes();
+
+
+			highlighter.css({
+				height : "3px",
+				width : sizes.width + "px",
+				position : "absolute",
+				backgroundColor : Colors.primaryBackground,
+				top : (position.top + sizes.height - (+element.css("marginBottom").replace("px", "")))+ "px",
+				left : position.left + "px",
+				transform : "scale3d(0, 1, 1)"
+			});
+		}
+
+		var doc = new Mold.Lib.Element(window);
+
+		doc.on("afterresize", function(){
+			initHeightlighter();
 		});
+
+		doc.on("beforeresize", function(){
+			highlighter.css({
+				transform : "scale3d(0, 1, 1)"
+			});
+		})
+
+
+
+		initHeightlighter();
+
+		element.on("focus", function(){
+			highlighter.animate({
+				transform : "scale3d(1, 1, 1)"
+			}, 0.4)
+		});
+
+		element.on("blur", function(){
+
+			highlighter.animate({
+				transform :  "scale3d(0, 1, 1)"
+			}, 0.4)
+		})
 
 		if(!hasAbreastParent){
 	
