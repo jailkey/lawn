@@ -79,6 +79,46 @@ label{
 	color: button-color(primary, background);
 }
 
+input[type="checkbox"] + label,
+input[type="radio"] + label{
+	position: static;
+	font-size: pxToRem($label-big-font-size);
+	line-height: pxToRem($standard-line-height);
+	margin-bottom: $label-margin;
+	opacity: 1;
+	color: $label-color;
+	display: inline-block;
+
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+
+}
+
+input[type="checkbox"]{
+	width: $input-checkbox-size;
+
+}
+
+input[type="radio"]{
+	width: $input-radio-size;
+}
+
+[is="form-error"]{
+	font-size: $very-small-font-size;
+	line-height: $very-small-font-size + 2;
+	height: $very-small-font-size + 2;
+	color: $error-color;
+    display:block;
+ 	margin-top: - ($very-small-font-size - 2);
+ 	text-align: right;
+}
+
+
+form[has~="seperator"]{
+
+}
 
 
 [has~="abreast-labels"] {
@@ -104,3 +144,5 @@ label{
 	}
 
 }
+
+

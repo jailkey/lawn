@@ -11,6 +11,7 @@ $quaternary-color: #f6bf00;
 $error-color: #c30000;
 $warn-color: #c36e00;
 $success-color: #20c300;
+$standard-border-color: #999999;
 
 
 $primary-colors : get-shade-map($primary-color);
@@ -54,6 +55,8 @@ $medium-icon-size: 30px;
 $small-icon-size: 14px;
 $very-small-icon-size : 10px;
 
+$icon-spacing : 5px;
+
 //Lineheight
 $standard-line-height: 20px;
 $extra-big-line-height: 60px;
@@ -72,6 +75,8 @@ $triple-margin: 45px;
 $grind-default-spacing: evently; //possible values are evently and between
 $grid-space-between: 20px;
 $grid-space-evently: 5px;
+$grid-seperator-width: 2px;
+$grid-seperator-color: $standard-border-color;
 
 //buttons
 $button-shadows : off;
@@ -171,7 +176,7 @@ $error-button-color : (
 );
 
 //Forms
-$input-border-color: #999999;
+$input-border-color: $standard-border-color;
 $input-form-background: #ffffff;
 $input-border-width: 2px;
 $input-padding-left-right: 3px;
@@ -180,6 +185,10 @@ $input-margin: 10px;
 $input-font-size: $standard-font-size;
 $input-line-height: $standard-line-height;
 $input-placeholder-color: #bbbbbb;
+$input-icon-color: $standard-border-color;
+
+$input-checkbox-size: 20px;
+$input-radio-size: 20px;
 
 $label-font-size: $very-small-font-size;
 $label-margin: 5px;

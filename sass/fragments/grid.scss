@@ -8,6 +8,7 @@
 	flex-wrap: wrap;
 	justify-content: space-around;
 	width: 100%;
+	position: relative;
 }
 
 [is="column"]{
@@ -16,7 +17,7 @@
 	display: inline-block;
 	box-sizing: border-box;
 	overflow: hidden;
-	
+	position: relative;
 	@include flex-grow(1);
 	@if $grind-default-spacing == between {
 		padding-right: pxToRem($grid-space-between / 3);
@@ -24,9 +25,18 @@
 	}
 }
 
-[is="column"] {
-	
+[is="item"]{
+	font-size: $standard-font-size;
+	display: block;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+	@if $grind-default-spacing == between {
+		padding-right: pxToRem($grid-space-between / 3);
+		padding-left: pxToRem($grid-space-between / 3);
+	}
 }
+
 
 [is="row"][has="no-grow"] [is="column"]{
 	flex-grow: 0;
@@ -68,12 +78,6 @@
 
 }
 
-[is="item"] {
-	font-size: $standard-font-size;
-	display: inline-block;
-
-}
-
 
 //generate column width
 @for $i from 1 through 12 {
@@ -100,10 +104,18 @@
 	 }
 }
 
+[is="row"][has~="no-spacing"] [is="column"]:first-child,
+[is="row"][has~="no-spacing"] [is="column"]:last-child,
+[is="row"][has~="no-spacing"] [is="column"],
+[is="row"][has~="no-spacing"] [is="item"]:first-child,
+[is="row"][has~="no-spacing"] [is="item"]:last-child,
+[is="row"][has~="no-spacing"] [is="item"]{
+	padding: 0;
+}
 
 [is="row"][has~="evently-spacing"] > [is="column"]:first-child,
 [is="row"][has~="evently-spacing"] > [is="column"]:last-child,
-[is="row"][has~="evently-spacing"] > [is="column"] {
+[is="row"][has~="evently-spacing"] > [is="column"]{
 	padding: $grid-space-evently;
 }
 
@@ -121,4 +133,48 @@
 	padding-right: 0;
 	padding-left: pxToRem($grid-space-between / 2);
 }
+
+
+[is="row"][has~="seperator"] > [is="column"]:first-child,
+[is="row"][has~="seperator"] > [is="column"],
+[is="row"][has~="seperator"] > [is="item"]:first-child,
+[is="row"][has~="seperator"] > [is="item"]{
+	border-right: pxToRem($grid-seperator-width) $grid-seperator-color solid;
+}
+
+[is="row"][has~="seperator"] > [is="column"]:last-child{
+	border-right: none;
+}
+
+[is="row"][has~="no-spacing"] [is="column"][has*="icon-"]:first-child,
+[is="row"][has~="no-spacing"] [is="column"][has*="icon-"],
+[is="row"][has~="no-spacing"] [is="column"][has*="icon-"]:last-child,
+[is="row"][has~="no-spacing"] [is="item"][has*="icon-"]:first-child,
+[is="row"][has~="no-spacing"] [is="item"][has*="icon-"],
+[is="row"][has~="no-spacing"] [is="item"][has*="icon-"]:last-child,
+[is="row"][has*="icon-"],
+[is="column"][has*="icon-"],
+[is="item"][has*="icon-"]{
+	padding-left: pxToRem($standard-icon-size + ($icon-spacing * 2));
+}
+
+[is="row"][has*="icon-"]:before,
+[is="column"][has*="icon-"]:before,
+[is="item"][has*="icon-"]:before{
+	position: absolute;
+	left: $icon-spacing;
+	top: $icon-spacing;
+}
+
+//special form icon spacing
+form [is="row"][has*="icon-"]:before,
+form [is="column"][has*="icon-"]:before,
+form [is="item"][has*="icon-"]:before{
+	top: $label-font-size + $icon-spacing;
+	color: $input-icon-color;
+}
+
+
+
+
 
