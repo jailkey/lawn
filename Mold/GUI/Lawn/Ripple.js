@@ -19,7 +19,15 @@ Seed({
 	},
 	function(node, element, collection){
 		var _animation = false;
-		
+		var elementPosition = element.css("position");
+
+		if(elementPosition === "static"){
+			element.css("position", "relative");
+		}
+
+
+	
+
 		element.on("click", function(e){
 			
 			if(
@@ -34,11 +42,13 @@ Seed({
 					position = element.position(),
 					sizes = element.sizes();
 
+
 				helper.css({
-					width : (sizes.width / 10) + "px",
-					height : (sizes.width / 10) + "px",
-					left : (e.pageX - position.left - 10) ,
-					top : (e.pageY - position.top - 10) 
+					width : Math.round(sizes.width / 10) + "px",
+					height : Math.round(sizes.width / 10) + "px",
+					borderRadius : "50%",
+					left : ((e.pageX - position.left) - ((sizes.width / 10) /2)),
+					top : ((e.pageY - position.top)- ((sizes.width / 10) /2)) 
 				});
 
 				if(properties){

@@ -209,24 +209,54 @@
 
 <h2>forms</h2>
 <form>
-	<div is="row">
+	<div is="row" has="no-spacing" >
 		<div is="column">
 			FORMS:
 		</div>
 		<div is="column">
-			
+		
+			<div is="item" has="icon-water">
 				<label>Name:</label>
 				<input type="text" name="test" placeholder="Name" required>
-			
+			</div>
+			<div is="item" has="icon-mail">
 				<label>E-Mail:</label>
 				<input type="email" name="test" placeholder="E-Mail" required>
-
+			</div>
+			<div is="item">
 				<label>disabled E-Mail:</label>
 				<input type="email" name="test" placeholder="disabled E-Mail" disabled>
+			</div>
+		
+			<div is="row">
+				<div is="column">
+					
+					<input type="radio" value="test">
+					<label>Klick hier</label>
+					
+					<input type="radio" value="test">
+					<label>Klick nochmal</label>
+					
+					<input type="radio" value="test">
+					<label>Klick wieder</label>
+				</div>
+				<div is="column">
 				
-				
+					<input type="checkbox" value="test">
+					<label>Klick hier</label>
+					
+					<input type="checkbox" value="test">
+					<label>Klick nochmal</label>
+					
+					<input type="checkbox" value="test">
+					<label>Klick wieder</label>
+				</div>
+
+			</div>
+			<div is="row">
 				<label>Text:</label>
 				<textarea placeholder="Text"></textarea>
+			</div>
 			
 		</div>
 	</div>
