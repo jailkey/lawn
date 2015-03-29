@@ -30,37 +30,28 @@ Seed({
 					properties = element.getAttribute("has"),
 					growToStart = "scale3d(5, 5, 5)",
 					growToEnd = "scale3d(20, 20, 20)",
-					growTime = "0.9s";
+					growTime = "0.9s",
+					position = element.position(),
+					sizes = element.sizes();
 
 				helper.css({
-					left : (e.pageX - element.position().left - 10) ,
-					top : (e.pageY - element.position().top - 10) 
+					width : (sizes.width / 10) + "px",
+					height : (sizes.width / 10) + "px",
+					left : (e.pageX - position.left - 10) ,
+					top : (e.pageY - position.top - 10) 
 				});
 
 				if(properties){
 					properties = properties.split(" ");
 					
 					if(Mold.contains(properties, "round-shapes")){
-						
-						growToStart = "scale3d(0.8, 0.8, 0.8)";
-						growToEnd = "scale3d(5, 5, 5)";
 						growTime = "0.6s";
-					
-						helper.css({
-							left :  element.sizes().width / 2 - 10,
-							top :  element.sizes().height / 2 - 10 
-						})
 					}
 				};
 				
 				helper.addClass("ripple-helper");
-				
-				
 
 				element.append(helper);
-				console.log("growTime", growTime);
-
-		
 
 				helper.animate([
 					{
