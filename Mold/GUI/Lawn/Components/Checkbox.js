@@ -1,5 +1,5 @@
 Seed({
-		name : "Mold.GUI.Lawn.Components.Radio",
+		name : "Mold.GUI.Lawn.Components.Checkbox",
 		dna : "component",
 		include : [
 			"->Mold.DNA.Component",
@@ -10,7 +10,7 @@ Seed({
 			{
 				at : "attribute",
 				name : "type",
-				value : "radio",
+				value : "checkbox",
 				watchable : true,
 				collect : {
 					attribute : [
@@ -26,36 +26,27 @@ Seed({
 			position = element.position(true),
 			size = element.sizes();
 
-		overlay.setAttribute("is", "radio-overlay");
+		overlay.setAttribute("is", "checkbox-overlay");
 		overlay.setAttribute("state", (element.checked) ? "checked" : "unchecked");
 
 		overlay.css({
 			left : position.left
 		})
 
-		var resetRadioGroup = function(){
-			var name = element.getAttribute("name");
-			var group = new Elements('input[name="' + name + '"][type="radio"]');
-			
-			group.each(function(selected){
-				if(selected !== element){
-					selected.removeAttribute("checked");
-					selected.checked = false;
-				}
-			})
-		}
-
+	
 		overlay.on("click", function(){
-			resetRadioGroup();
 			if(overlay.hasAttrValue("state", "unchecked")){
 				overlay.setAttribute("state", "checked");
 				element.setAttribute("checked", "checked");
+			}else{
+				overlay.setAttribute("state", "unchecked");
+				element.removeAttribute("checked", "checked");
 			}
 		})
 
 		var testButton = function(value){
+
 			if(element.getAttribute("checked") === "true" || element.getAttribute("checked") === "checked" || value){
-				resetRadioGroup();
 				overlay.setAttribute("state", "checked");
 			}else{
 				overlay.setAttribute("state", "unchecked");
@@ -72,8 +63,7 @@ Seed({
 
 		element.before(overlay);
 		element.css({
-			"display" : "none"
-		});
-
+			display : "none"
+		})
 	}
 );
