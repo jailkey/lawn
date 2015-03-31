@@ -10,13 +10,18 @@
 
 @mixin animation($value){
 	-webkit-animation: $value;
-	animation: $value;
+    -moz-animation: $value;
+    -ms-animation: $value;
+    -o-animation: $value;
+    animation: $value;
 }
 
 @mixin keyframes($name){
 	@keyframes #{$name} {
 		@content;
 	}
+
+
 
 	@-webkit-keyframes #{$name}{
 		@content;
@@ -115,4 +120,11 @@
 	[is="button"][has~="#{$selector}"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover{
 		@content;
 	}
+}
+
+
+@mixin calc($prop, $value){
+	#{$prop}: -webkit-calc(#{$value});
+	#{$prop}: -moz-calc(#{$value});
+	#{$prop}: calc(#{$value});
 }

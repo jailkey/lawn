@@ -8,7 +8,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
-  position: relative; }
+  position: relative;
+  overflow: visible; }
 
 [is="column"] {
   font-size: 14px;
@@ -17,6 +18,7 @@
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
+  overflow: visible;
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
   flex-grow: 1; }
@@ -26,7 +28,8 @@
   display: block;
   box-sizing: border-box;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  overflow: visible; }
 
 [is="row"][has="no-grow"] [is="column"] {
   flex-grow: 0; }
