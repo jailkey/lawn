@@ -24,7 +24,7 @@ Seed({
 		if(elementPosition === "static"){
 			element.css("position", "relative");
 		}
-
+		/*
 		element.on("click", function(e){
 			
 			if(
@@ -81,7 +81,7 @@ Seed({
 				});
 			}
 			
-		});
+		});*/
 
 	}
 )

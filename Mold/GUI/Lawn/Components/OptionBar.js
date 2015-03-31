@@ -24,7 +24,7 @@ Seed({
 		var buttons = new Elements('[is=button]', element);
 	
 		buttons.on("click", function(e){
-			
+			console.log("click")
 			var selected =  new Element(this),
 				state = selected.attr("state");
 
@@ -37,7 +37,8 @@ Seed({
 				&& state !== "loading"
 			){
 
-				if(element.hasAttrValue("has", "unique-value") || selected.hasAttrValue("has", "unique-value") ){
+				if(element.hasAttrValue("has", "unique-values") || selected.hasAttrValue("has", "unique-values") ){
+
 					buttons.removeAttrValue("state", "selected");
 					selected.addAttrValue("state", "selected");
 				}else{

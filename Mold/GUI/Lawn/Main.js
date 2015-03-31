@@ -7,12 +7,13 @@ Seed({
 			".Components.Loader",
 			".Components.OptionBar",
 			".Components.FormInput",
-			".Components.Radio"
+			".Components.Radio",
+			".Components.Checkbox"
 		]
 	},
 	function(){
 
-	
+
 
 	}
 )
