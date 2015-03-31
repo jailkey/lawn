@@ -6,10 +6,13 @@ Seed({
 			".Loading",
 			".Components.Loader",
 			".Components.OptionBar",
-			".Components.FormInput"
+			".Components.FormInput",
+			".Components.Radio"
 		]
 	},
 	function(){
-		console.log("GO")
+
+	
+
 	}
 )

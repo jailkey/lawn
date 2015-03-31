@@ -25,9 +25,6 @@ Seed({
 			element.css("position", "relative");
 		}
 
-
-	
-
 		element.on("click", function(e){
 			
 			if(
