@@ -4,6 +4,10 @@
 //Create $colors array
 
 $colors : (
+	input-standard : (
+		colors : $input-standard-colors,
+		buttons : $primary-button-color
+	),
 	primary : (
 		colors : $primary-colors,
 		buttons : $primary-button-color

@@ -1,3 +1,62 @@
+[is][has~="input-standard-background"],
+[has~="input-standard-background"] {
+  background-color: #a601bf; }
+
+[is][has~="input-standard-color"],
+[has~="input-standard-color"] {
+  color: #a601bf; }
+
+button[has~="input-standard-background"],
+[role=button][has~="input-standard-background"],
+[type="button"][has~="input-standard-background"],
+[type="submit"][has~="input-standard-background"],
+[type="reset"][has~="input-standard-background"],
+[is="button"][has~="input-standard-background"] {
+  background-color: #0093c3;
+  color: #ffffff; }
+  button[has~="input-standard-background"] .ripple-helper,
+  [role=button][has~="input-standard-background"] .ripple-helper,
+  [type="button"][has~="input-standard-background"] .ripple-helper,
+  [type="submit"][has~="input-standard-background"] .ripple-helper,
+  [type="reset"][has~="input-standard-background"] .ripple-helper,
+  [is="button"][has~="input-standard-background"] .ripple-helper {
+    background: #00b9f6; }
+
+button[state="selected"][has~="input-standard-background"],
+[role=button][state="selected"][has~="input-standard-background"],
+[type="button"][state="selected"][has~="input-standard-background"],
+[type="submit"][state="selected"][has~="input-standard-background"],
+[type="reset"][state="selected"][has~="input-standard-background"],
+[is="button"][state="selected"][has~="input-standard-background"] {
+  background-color: #00465d;
+  box-shadow: inset 0 -4px 0px #0093c3;
+  color: rgba(255, 255, 255, 0.9); }
+
+button:disabled[has~="input-standard-background"],
+button[disabled][has~="input-standard-background"],
+button[state="loading"][has~="input-standard-background"],
+[role="button"]:disabled[has~="input-standard-background"],
+[role="button"][disabled][has~="input-standard-background"],
+[role="button"][state="loading"][has~="input-standard-background"],
+[is="button"]:disabled[has~="input-standard-background"],
+[is="button"][disabled][has~="input-standard-background"],
+[is="button"][state="loading"][has~="input-standard-background"] {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 147, 195, 0.7); }
+
+button[has~="input-standard-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[role=button][has~="input-standard-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover,
+[is="button"][has~="input-standard-background"]:not([state="disabled"]):not([state="loading"]):not([state="selected"]):hover {
+  background-color: #006d90; }
+
+button[has~="input-standard-color"],
+[role=button][has~="input-standard-color"],
+[type="button"][has~="input-standard-color"],
+[type="submit"][has~="input-standard-color"],
+[type="reset"][has~="input-standard-color"],
+[is="button"][has~="input-standard-color"] {
+  color: #0093c3; }
+
 [is][has~="primary-background"],
 [has~="primary-background"] {
   background-color: #0093c3; }

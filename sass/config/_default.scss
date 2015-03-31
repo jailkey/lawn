@@ -12,6 +12,7 @@ $error-color: #c30000;
 $warn-color: #c36e00;
 $success-color: #20c300;
 $standard-border-color: #999999;
+$input-standard-color: $secondary-color;
 
 
 $primary-colors : get-shade-map($primary-color);
@@ -23,6 +24,8 @@ $white-colors: get-shade-map(#ffffff);
 $warn-colors: get-shade-map($warn-color);
 $success-colors: get-shade-map(#20c300);
 $error-colors:  get-shade-map($error-color);
+$input-standard-colors:  get-shade-map($input-standard-color);
+
 
 
 
@@ -188,7 +191,9 @@ $input-placeholder-color: #bbbbbb;
 $input-icon-color: $standard-border-color;
 
 $input-checkbox-size: 20px;
+$input-checkbox-label-space: 20px;
 $input-radio-size: 20px;
+$input-radio-label-space: 20px;
 
 $label-font-size: $very-small-font-size;
 $label-margin: 5px;
