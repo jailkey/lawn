@@ -21,10 +21,11 @@ Seed({
 		]
 	},
 	function(node, element, collection){
+
+
 		var buttons = new Elements('[is=button]', element);
 	
 		buttons.on("click", function(e){
-			console.log("click")
 			var selected =  new Element(this),
 				state = selected.attr("state");
 

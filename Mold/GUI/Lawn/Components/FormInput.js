@@ -22,7 +22,7 @@ Seed({
 		var type = element.attr("type");
 
 		if(type !== "radio" && type !== "checkbox"){
-			
+
 			var hasAbreastParent = element.parent('[has~="abreast-labels"]'),
 				highlighter = new Mold.Lib.Element("div"),
 				errorMessage = new Mold.Lib.Element("span"),
@@ -37,12 +37,15 @@ Seed({
 
 				var position = element.position(true),
 					sizes = element.sizes();
+
+				console.log(position.top, " - ", sizes.height)
+
 				highlighter.css({
 					height : "3px",
 					width : sizes.width + "px",
 					position : "absolute",
-					backgroundColor : Colors.primaryBackground,
-					top : (position.top + sizes.height - element.css("marginBottom").replace("px", ""))+ "px",
+					backgroundColor : Colors.inputStandard,
+					top : (position.top + sizes.height - element.css("marginBottom").replace("px", "") )+ "px",
 					left : position.left + "px",
 					transform : "scale3d(0, 1, 1)"
 				});
@@ -75,8 +78,7 @@ Seed({
 
 			element.on("focus", function(){
 				initHeightlighter();
-			
-				element.parent().css("color", Colors.primaryBackground, ":before");
+				element.parent().css("color", Colors.inputStandard, ":before");
 				highlighter.animate({
 					transform : "scale3d(1, 1, 1)"
 				}, 0.4)

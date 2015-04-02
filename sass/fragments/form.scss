@@ -18,8 +18,7 @@ input, textarea{
 
 
 input:empty:focus, textarea:empty:focus{
-
-	border-color: button-color(primary, background);
+	border-color: $input-standard-color;
 	outline: none;
 }
 
@@ -68,15 +67,14 @@ label{
 	font-size: pxToRem($label-font-size);
 	line-height: pxToRem($label-font-size);
 	margin: 0;
-	padding:0;
-	color: $label-color;
+	padding: 0;
 	box-sizing: border-box;
 	display: block;
 	z-index:0;
 	opacity: 0;
 	position: relative;
 	bottom: pxToRem(5px);
-	color: button-color(primary, background);
+	color: $input-standard-color;
 }
 
 input[type="checkbox"] + label,
@@ -84,7 +82,7 @@ input[type="radio"] + label{
 	position: static;
 	font-size: pxToRem($label-big-font-size);
 	line-height: pxToRem($standard-line-height);
-	margin-bottom: $label-margin;
+	margin-bottom: pxToRem($label-margin);
 	opacity: 1;
 	color: $label-color;
 	display: inline-block;
@@ -97,13 +95,13 @@ input[type="radio"]{
 }
 
 input[type="checkbox"]{
-	width: $input-checkbox-size;
+	width: pxToRem($input-checkbox-size);
 
 }
 
 input[type="radio"]{
-	width: $input-radio-size;
-	height: $input-radio-size;
+	width: pxToRem($input-radio-size);
+	height: pxToRem($input-radio-size);
 	display: inline-block;
 	padding:0;
 	margin:0;
@@ -117,40 +115,39 @@ input[type="radio"]{
 	visibility: hidden;
 	cursor: pointer;
 	outline: none;
+	margin-right: $input-radio-label-space;
 }
 
 
 [is="radio-overlay"] {
 	position: relative;
-	background: #cbd1d8;
-	height: $input-radio-size;
-	width:  $input-radio-size;
+	background: $input-standard-color;
+	height: pxToRem($input-radio-size);
+	width:  pxToRem($input-radio-size);
 	border: 2px $input-standard-color solid;
 	display:inline-block;
 	vertical-align: top;
 	cursor: pointer;
 	border-radius: 50%;
+	cursor: pointer;
 	box-shadow: inset 0 0 0 $input-radio-size white;
-	transition: box-shadow 0.4s ease-in-out;
+	margin-right: $input-radio-label-space;
 }
 
 [is="radio-overlay"][state="checked"] {
-	position: relative;
-	background: $input-standard-color;
-	height: $input-radio-size;
-	width:  $input-radio-size;
-	display:inline-block;
-	vertical-align: top;
-	cursor: pointer;
 	@include animation(radioselect 0.3s ease-out 1 forwards);
+}
+
+[is="radio-overlay"][state="unchecked"]{
+	@include animation(radiounselect 1s ease-out 1 forwards);
 }
 
 @include keyframes(radioselect){
 	0% {
-		box-shadow: inset 0 0 0 $input-radio-size white, 0 0 0 ($input-radio-size * 2) rgba($input-standard-color, 0);
+		box-shadow: inset 0 0 0 pxToRem($input-radio-size) white, 0 0 0 (pxToRem($input-radio-size) * 2) rgba($input-standard-color, 0);
 	}
 	40% {
-		box-shadow: inset 0 0 0 $input-radio-size white, 0 0 0 ($input-radio-size / 2) rgba($input-standard-color, 0.8);
+		box-shadow: inset 0 0 0 pxToRem($input-radio-size) white, 0 0 0 (pxToRem($input-radio-size) / 2) rgba($input-standard-color, 0.8);
 	}
 	100% {
 		box-shadow: inset 0 0 0 3px white, 0 0 0 0 rgba($input-standard-color, 0);
@@ -158,9 +155,25 @@ input[type="radio"]{
 }
 
 
+@include keyframes(radiounselect){
+	0% {
+		box-shadow: inset 0 0 0 3px white,
+	}
+	40% {
+		box-shadow: inset 0 0 0 pxToRem($input-radio-size) white;
+	}
+	100% {
+		box-shadow: inset 0 0 0 $input-radio-size white;
+	}
+}
+
+
+html body form:nth-child(1) div:nth-child(1) div:nth-child(2) div:nth-child(2){ background: #000000;}
+
+
 
 input[type="radio"] + label {
-	@include calc(width, 99% - #{$input-radio-size} - 5px);
+	@include calc(width, 99% - #{pxToRem($input-radio-size)} - #{pxToRem($input-radio-label-space)}  - 5px);
 	display: inline-block;
 	box-sizing:border-box;
 }
@@ -168,8 +181,8 @@ input[type="radio"] + label {
 
 //Checkboxes
 input[type="checkbox"]{
-	width: $input-checkbox-size;
-	height: $input-checkbox-size;
+	width: pxToRem($input-checkbox-size);
+	height: pxToRem($input-checkbox-size);
 	display: inline-block;
 	padding:0;
 	margin:0;
@@ -188,47 +201,68 @@ input[type="checkbox"]{
 
 [is="checkbox-overlay"] {
 	position: relative;
-	background: #cbd1d8;
-	height: $input-checkbox-size;
-	width:  $input-checkbox-size;
+	border-radius: 2px;
+	background: $input-standard-color;
+	height: pxToRem($input-checkbox-size);
+	width:  pxToRem($input-checkbox-size);
 	border: 2px $input-standard-color solid;
 	display:inline-block;
 	vertical-align: top;
 	cursor: pointer;
-	box-shadow: inset 0 0 0 $input-checkbox-size white;
-	transition: box-shadow 0.4s ease-in-out;
+	box-shadow: inset 0 0 0 pxToRem($input-checkbox-size) white;
 	margin-right: $input-checkbox-label-space;
+	@include animation(checkboxunselect 0.3s ease-out 1 forwards);
 }
 
 [is="checkbox-overlay"][state="checked"] {
-	position: relative;
-	background: $input-standard-color;
-	height: $input-checkbox-size;
-	width:  $input-checkbox-size;
-	display:inline-block;
-	vertical-align: top;
-	cursor: pointer;
+
 	@include animation(checkboxselect 0.3s ease-out 1 forwards);
+}
+
+[is="checkbox-overlay"]:before{
+	font-size: pxToRem($input-checkbox-size - 6px);
+	padding-left:  pxToRem(3px);
+	padding-top:  pxToRem(3px);
+}
+
+[is="checkbox-overlay"][state="checked"]:before{
+	color: #ffffff;
 }
 
 @include keyframes(checkboxselect){
 	0% {
-		box-shadow: inset 0 0 0 $input-checkbox-size white, 0 0 0 ($input-checkbox-size * 2);
+		box-shadow: inset 0 0 0 pxToRem($input-checkbox-size) white, 0 0 0 (pxToRem($input-checkbox-size) * 2);
 		color: rgba($input-standard-color, 0);
 	}
 	40% {
-		box-shadow: inset 0 0 0 $input-checkbox-size white, 0 0 0 ($input-checkbox-size / 2);
+		box-shadow: inset 0 0 0 pxToRem($input-checkbox-size) white, 0 0 0 (pxToRem($input-checkbox-size) / 2);
 		color: rgba($input-standard-color, 0.8);
 	}
 	100% {
-		box-shadow: inset 0 0 0 3px white, 0 0 0 0;
-		color: rgba($primary-color, 0);
+		box-shadow: inset 0 0 0 0 white, 0 0 0 0;
+		color: rgba($input-standard-color, 0);
+	}
+}
+
+@include keyframes(checkboxunselect){
+	0% {
+		box-shadow: inset 0 0 0 0 white, 0 0 0 0;
+		color: rgba($input-standard-color, 0);
+	}
+	40% {
+		box-shadow: inset 0 0 0 pxToRem($input-checkbox-size) white, 0 0 0 (pxToRem($input-checkbox-size) / 2);
+		color: rgba($input-standard-color, 0.8);
+	}
+	100% {
+		box-shadow: inset 0 0 0 pxToRem($input-checkbox-size) white;
+		color: rgba($input-standard-color, 0);
 	}
 }
 
 
+
 input[type="checkbox"] + label{
-	@include calc(width, 99% - #{$input-checkbox-size} - #{$input-checkbox-label-space} - 5px);
+	@include calc(width, 99% - #{pxToRem($input-checkbox-size)} - #{pxToRem($input-checkbox-label-space)} - 5px);
 	display: inline-block;
 	box-sizing:border-box;
 }

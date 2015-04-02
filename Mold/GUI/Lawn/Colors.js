@@ -9,9 +9,11 @@ Seed({
 
 		var css = new Mold.Lib.CSS();
 		var primaryBackground = css.getRule('[has~="primary-color"]').style.color;
+		var inputStandard = css.getRule('[has~="input-standard-color"]').style.color;
 
 		return {
-			"primaryBackground" : primaryBackground
+			"primaryBackground" : primaryBackground,
+			"inputStandard" : inputStandard
 		}
 	}
 )

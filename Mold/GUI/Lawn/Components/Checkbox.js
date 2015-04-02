@@ -27,6 +27,7 @@ Seed({
 			size = element.sizes();
 
 		overlay.setAttribute("is", "checkbox-overlay");
+		overlay.setAttribute("has", "icon-check")
 		overlay.setAttribute("state", (element.checked) ? "checked" : "unchecked");
 
 		overlay.css({
