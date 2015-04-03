@@ -34,6 +34,7 @@
 	overflow: hidden;
 	position: relative;
 	overflow: visible;
+	width: 100%;
 	@if $grind-default-spacing == between {
 		padding-right: pxToRem($grid-space-between / 3);
 		padding-left: pxToRem($grid-space-between / 3);

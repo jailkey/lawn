@@ -168,9 +168,6 @@ input[type="radio"]{
 }
 
 
-html body form:nth-child(1) div:nth-child(1) div:nth-child(2) div:nth-child(2){ background: #000000;}
-
-
 
 input[type="radio"] + label {
 	@include calc(width, 99% - #{pxToRem($input-radio-size)} - #{pxToRem($input-radio-label-space)}  - 5px);

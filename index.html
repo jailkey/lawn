@@ -227,7 +227,7 @@
 				<label>disabled E-Mail:</label>
 				<input type="email" name="test" placeholder="disabled E-Mail" disabled>
 			</div>
-		
+			<h4>radio / checkbox</h4>
 			<div is="row">
 				<div is="column">
 					
@@ -253,11 +253,56 @@
 				</div>
 
 			</div>
+			<h4>Textarea</h4>
 			<div is="row">
-				<label>Text:</label>
-				<textarea placeholder="Text"></textarea>
+				<div is="item">
+					<label>Text:</label>
+					<textarea placeholder="Text"></textarea>
+				</div>
 			</div>
-			
+
+			<h4>Selectbox</h4>
+			<div is="row">
+				<div is="item">
+					<label>Please Select:</label>
+					<select placeholder="Please Select" name="test">
+						<option>Banana</option>
+						<option>Apple</option>
+						<option>Pear</option>
+					</select>
+				</div>
+			</div>
+
+			<h4>Date</h4>
+			<div is="row">
+				<div is="item">
+					<label>Date:</label>
+					<input type="date" placeholder="Date">
+				</div>
+				<div is="item">
+					<label>Datetime:</label>
+					<input type="datetime" placeholder="daDatetimete">
+				</div>
+				<div is="item">
+					<label>Datetime local:</label>
+					<input type="datetime-local" placeholder="Datetime local">
+				</div>
+				<div is="item">
+					<label>Month:</label>
+					<input type="month" placeholder="Month">
+				</div>
+				<div is="item">
+					<label>Time:</label>
+					<input type="time" placeholder="Time">
+				</div>
+			</div>
+			<h4>File</h4>
+			<div is="row">
+				<div is="item">
+					<label>Select File:</label>
+					<input type="file" value="test">
+				</div>
+			</div>
 		</div>
 	</div>
 </form>

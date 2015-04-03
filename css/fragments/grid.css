@@ -29,7 +29,8 @@
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
-  overflow: visible; }
+  overflow: visible;
+  width: 100%; }
 
 [is="row"][has="no-grow"] [is="column"] {
   flex-grow: 0; }
