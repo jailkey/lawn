@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAIA;kBACkB;EACjB,UAAU,EAAE,IAAI;;AAGjB,uBAAuB;EC0CrB,UAAU,EAAE,gEAAqB;;ADtCnC;;;;;0CAK0C;ECiCxC,UAAU,EAAE,gEAAqB;;AD7BnC,uBAAuB;EC6BrB,UAAU,EAAE,4DAAqB;;ADzBnC;;;;;0CAK0C;ECoBxC,UAAU,EAAE,8DAAqB;;ADhBnC,uBAAuB;ECgBrB,UAAU,EAAE,8DAAqB;;ADZnC;;;;;0CAK0C;ECOxC,UAAU,EAAE,gEAAqB;;ADFnC,uBAAuB;ECErB,UAAU,EAAE,gEAAqB;;ADEnC;;;;;0CAK0C;ECPxC,UAAU,EAAE,+DAAqB;;ADWnC,uBAAuB;ECXrB,UAAU,EAAE,+DAAqB;;ADenC;;;;;0CAK0C;ECpBxC,UAAU,EAAE,+DAAqB",
-"sources": ["../../sass/properties/shadows.scss","../../sass/system/mixins.scss"],
-"names": [],
-"file": "shadows.css"
-}

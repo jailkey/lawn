@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,gCAAgC;EAC/B,SAAS,EAAE,oBAAoB",
-"sources": ["../../sass/behavior/touch.scss"],
-"names": [],
-"file": "touch.css"
-}

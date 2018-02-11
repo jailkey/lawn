@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAIA,MAAO;EACN,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,WAAW,EC6BQ,kBAAc;ED5BjC,SAAS,EC+BW,IAAI;ED9BxB,KAAK,ECNgB,OAAO;EDO5B,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,IAAI",
-"sources": ["../sass/init.scss","../sass/config/_default.scss"],
-"names": [],
-"file": "init.css"
-}
